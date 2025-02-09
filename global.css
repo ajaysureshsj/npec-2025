@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+}
+
+/* Show dropdown on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Make sure the page takes full height */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1; /* Pushes footer to the bottom */
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
