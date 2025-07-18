@@ -21,6 +21,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <style>
+        /* Define the blinking animation */
+        @keyframes blink {
+            0% { color: black; }
+            50% { color: blue; }
+            100% { color: black; }
+        }
+
+        /* Apply the animation to the class */
+        .blinking-text {
+            animation: blink 2s linear infinite;
+        }
+    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -249,7 +262,7 @@
         <li class="list-group-item">
           IEEE PELS/IAS/IES members will get a 5% additional discount.
         </li>
-        <li class="list-group-item">
+        <li class="list-group-item fw-bold blinking-text">
           Student registrations are valid for inclusion of papers in the
           conference proceedings.
         </li>

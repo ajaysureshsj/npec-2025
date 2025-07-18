@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="NPEC 2025 Team" />
@@ -15,7 +14,6 @@
     />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph Meta Tags (for social media sharing) -->
     <meta
       property="og:title"
       content="NPEC 2025 - National Power Electronics Conference"
@@ -31,7 +29,6 @@
     <meta property="og:url" content="https://npec2025.com" />
     <meta property="og:type" content="website" />
 
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
@@ -46,7 +43,6 @@
       content="https://npec2025.com/assets/cover.jpeg"
     />
 
-    <!-- Favicon -->
     <link
       rel="icon"
       href="https://yourwebsite.com/assets/favicon.ico"
@@ -72,6 +68,11 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/flipdown@0.3.2/dist/flipdown.css"
     />
 
     <style>
@@ -136,10 +137,31 @@
       .about-content {
         text-align: justify;
       }
+
+      /* 2. ADDED: Custom Styles for Flipdown Timer */
+      .flipdown {
+        margin: 1.5rem auto 0;
+        white-space: nowrap; /* Add this to prevent wrapping */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* Make timer smaller on mobile screens */
+      @media (max-width: 767px) {
+        .flipdown {
+          /* Adjusted scale to better fit on one line */
+          transform: scale(0.6);
+          transform-origin: center top;
+          margin-top: 0;
+        }
+        .overlay h1 {
+          font-size: 1.8rem;
+        }
+      }
     </style>
   </head>
   <body>
-    <!-- Navbar -->
     <div class="d-none">
       <img src="/assets/cover.jpeg" alt="cover" />
     </div>
@@ -308,7 +330,6 @@
         </div>
       </div>
     </nav>
-    <!-- Announcement Marquee -->
     <div class="bg-white py-1 z-100">
       <marquee
         behavior="scroll"
@@ -319,14 +340,12 @@
         Stay Tuned for More Updates!
       </marquee>
     </div>
-    <!-- Background Video Section -->
     <div class="video-container">
       <video autoplay muted loop>
         <source src="assets/nitc.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <!-- Overlay Content -->
       <div class="overlay">
         <h1>12<sup>th</sup> National Power Electronics Conference 2025</h1>
         <p>at National Institute of Technology Calicut</p>
@@ -334,16 +353,20 @@
         <div class="icon-text">
           <i class="fa-solid fa-map-marker-alt"></i> NIT Calicut, India
         </div>
-        <div class="icon-text"> 
-          <p><i class="fa-solid fa-calendar-alt"></i> 14<sup>th</sup> to 16<sup>th</sup> December, 2025</p>
-          
+        <div class="icon-text">
+          <p>
+            <i class="fa-solid fa-calendar-alt"></i> 14<sup>th</sup> to 16<sup>th</sup>
+            December, 2025
+          </p>
         </div>
 
-        <a href="/pages/registration.html" class="btn btn-primary cta-button">Register Now</a>
+        <a href="/pages/registration.html" class="btn btn-primary cta-button"
+          >Register Now</a
+        >
+        <div id="flipdown" class="flipdown flipdown__theme-light"></div>
       </div>
     </div>
 
-    <!-- About the Conference Section -->
     <section class="about-section">
       <div class="container">
         <h2 class="text-center mb-4">About the Conference</h2>
@@ -388,7 +411,6 @@
       </div>
     </section>
 
-    <!-- Sticky Footer -->
     <footer class="footer">
       <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
     </footer>
@@ -397,5 +419,16 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/flipdown@0.3.2/dist/flipdown.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Unix timestamp (in seconds) for the countdown end date.
+        // End date: December 14, 2025, 9:00 AM
+        const endDate = new Date("2025-12-14T09:00:00").getTime() / 1000;
+
+        // Initialize FlipDown
+        new FlipDown(endDate, "flipdown").start();
+      });
+    </script>
   </body>
 </html>
