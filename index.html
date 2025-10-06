@@ -399,6 +399,51 @@
           text-align: left;
         }
       }
+
+      .flipdown {
+        margin: 1.5rem auto 0;
+        white-space: nowrap;
+        /* Add this to prevent wrapping */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Make timer smaller on mobile screens */
+      @media (max-width: 767px) {
+        .flipdown {
+          /* Adjusted scale to better fit on one line */
+          transform: scale(0.6);
+          transform-origin: center top;
+          margin-top: 0;
+        }
+
+        .overlay h1 {
+          font-size: 1.8rem;
+        }
+      }
+      /* Define the blinking animation */
+      @keyframes blink {
+        0% {
+          color: black;
+        }
+        50% {
+          color: blue;
+        }
+        100% {
+          color: black;
+        }
+      }
+
+      /* Apply the animation to the class */
+      .blinking-text {
+        animation: blink 2s linear infinite;
+      }
+
+      .red-text {
+        color: red;
+      }
     </style>
   </head>
 
@@ -506,6 +551,17 @@
         <p class="subtitle">at National Institute of Technology Calicut</p>
         <p class="location">NIT Calicut, India</p>
         <p class="date">14th to 16th December, 2025</p>
+
+
+        <a href="/pages/registration.html" class="btn btn-danger cta-button"
+                >Register Now</a
+              >
+              <a href="/pages/authors/call-for-special-sessions.html" class="btn btn-secondary cta-button">
+                Special Sessions
+              </a>
+
+        <div id="flipdown" class="flipdown flipdown__theme-light"></div>
+
       </div>
     </section>
 
@@ -526,6 +582,7 @@
         </span>
       </marquee>
 
+        
     <section class="content-section">
       <div class="container">
         <div class="content-wrapper">
@@ -545,7 +602,9 @@
               This NPEC 2025 will be a launch pad for many researchers to exhibit the influence of
               Power Electronics on various applications viz. industry, domestic, commercial,
               mobility and electric utility systems.
+
             </p>
+            
           </div>
           <div class="announcements-container">
             <div>
