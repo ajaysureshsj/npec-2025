@@ -13,475 +13,681 @@
       content="NPEC 2025, hosted at NIT Calicut, is a premier conference on power electronics, featuring keynote speakers, research paper presentations, and networking opportunities."
     />
     <meta name="robots" content="index, follow" />
-
-    <meta
-      property="og:title"
-      content="NPEC 2025 - National Power Electronics Conference"
-    />
+    <meta property="og:title" content="NPEC 2025 - National Power Electronics Conference" />
     <meta
       property="og:description"
       content="Join NPEC 2025 at NIT Calicut for expert keynotes, research presentations, and networking in power electronics."
     />
-    <meta
-      property="og:image"
-      content="https://npec2025.com/assets/cover.jpeg"
-    />
+    <meta property="og:image" content="https://npec2025.com/assets/cover.jpeg" />
     <meta property="og:url" content="https://npec2025.com" />
     <meta property="og:type" content="website" />
-
     <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="NPEC 2025 - National Power Electronics Conference"
-    />
+    <meta name="twitter:title" content="NPEC 2025 - National Power Electronics Conference" />
     <meta
       name="twitter:description"
       content="Join NPEC 2025 at NIT Calicut for expert keynotes, research presentations, and networking in power electronics."
     />
-    <meta
-      name="twitter:image"
-      content="https://npec2025.com/assets/cover.jpeg"
-    />
-
-    <link
-      rel="icon"
-      href="https://yourwebsite.com/assets/favicon.ico"
-      type="image/x-icon"
-    />
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="twitter:image" content="https://npec2025.com/assets/cover.jpeg" />
+    <link rel="icon" href="https://yourwebsite.com/assets/favicon.ico" type="image/x-icon" />
     <title>NPEC 2025 - Home</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/global.css" />
-    <link
+
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet" />
+     
+    
+    
+     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://unpkg.com/flipdown@0.3.2/dist/flipdown.css"
-    />
+
+    
 
     <style>
-      /* Full-screen background video */
-      .video-container {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
+      :root {
+        --npec-red: #830202;
+        --npec-dark-blue: #1a2332;
+        --npec-orange: #f57c00;
+        --npec-text-light: #f5f5f5;
+        --npec-text-dark: #212121;
+        --npec-gray: #424242;
       }
 
-      .video-container video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8f9fa;
+        color: var(--npec-text-dark);
+        overflow-x: hidden;
+        line-height: 1.6;
+        font-weight: 600;
       }
 
-      /* Overlay content */
-      .overlay {
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+      }
+
+      .left-decorator-top {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        /* Dark overlay for readability */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        padding: 20px;
+        z-index: 2;
       }
 
-      .overlay h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
+      @media (max-width: 992px) {
+        .left-decorator-top {
+          display: none;
+        }
+      }
+      /* Navbar */
+      .navbar {
+        background: var(--npec-red);
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 1px;
+        width: auto;
+        z-index: 10;
+        border-radius: 0 0 50px 50px;
+         backdrop-filter: blur(8px);
+        box-shadow: 0px 6px 15px var(--npec-dark-blue);
+
       }
 
-      .overlay p {
-        font-size: 1.2rem;
+      .navbar-nav {
+        padding: 0.5rem 1rem;
       }
 
-      .icon-text {
-        font-size: 1.2rem;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        justify-content: center;
+      .navbar-brand {
+        display: none;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem !important;
+        text-transform: uppercase;
+        font-family: inherit;
+      }
+
+      .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      /* Dropdown Menu Styling */
+      .dropdown-menu {
+        background-color: var(--npec-red);
+        border-radius: 10px;
+        border: none;
         margin-top: 10px;
       }
 
-      .cta-button {
-        margin-top: 20px;
-        padding: 8px 20px;
-        font-size: 1.2rem;
-        border-radius: 3px;
+      .dropdown-item {
+        color: var(--npec-text-light);
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
       }
 
-      .about-section {
-        padding: 60px 20px;
-        background-color: #f8f9fa;
+      .dropdown-item:hover,
+      .dropdown-item:focus {
+        background-color: #a31818; /* A slightly darker red */
+        color: white;
       }
 
-      .about-content {
-        text-align: justify;
+      /* Hero Section */
+      .hero-section {
+        background: var(--npec-text-light);
+        padding: 120px 0;
+        text-align: center;
+        position: relative;
+        z-index: 1;
       }
 
-      /* 2. ADDED: Custom Styles for Flipdown Timer */
-      .flipdown {
-        margin: 1.5rem auto 0;
-        white-space: nowrap;
-        /* Add this to prevent wrapping */
+      .hero-section h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        margin-bottom: 1rem;
+        font-family: "Prata", serif;
+        margin-top: 5rem;
+      }
+
+      .hero-section .subtitle {
+        font-size: 2rem;
+        color: var(--npec-gray);
+        margin-bottom: 0.5rem;
+        font-family: "Prata", serif;
+        font-weight: 900;
+      
+      }
+
+      .hero-section .location {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--npec-red);
+        font-family: "Prata", serif;
+      }
+
+      .hero-section .date {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--npec-dark-blue);
+        font-family: "Prata", serif;
+      }
+
+        #radial-dots-bg {
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
         width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+        }
+        .hero-section {
+        position: relative;
+        overflow: hidden;
+        }
+      
+      
+      /* About + Announcements */
+      .content-section {
+        padding: 80px 0;
+      }
+
+      .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 40px;
+      }
+
+      .about-container {
+        background: var(--npec-dark-blue);
+        color: var(--npec-text-light);
+        padding: 60px;
+        border-radius: 20px;
+        font-family: inherit;
+        font-size:1rem
+      }
+
+      .about-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-family: 'Prata',serif;
+      }
+
+      .announcements-container {
+        background: var(--npec-dark-blue);
+        color: var(--npec-text-light);
+        padding: 60px;
+        border-radius: 20px;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
       }
 
-      /* Make timer smaller on mobile screens */
-      @media (max-width: 767px) {
-        .flipdown {
-          /* Adjusted scale to better fit on one line */
-          transform: scale(0.6);
-          transform-origin: center top;
-          margin-top: 0;
-        }
-
-        .overlay h1 {
-          font-size: 1.8rem;
-        }
-      }
-      /* Define the blinking animation */
-      @keyframes blink {
-        0% {
-          color: black;
-        }
-        50% {
-          color: blue;
-        }
-        100% {
-          color: black;
-        }
+      .announcements-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-family: 'Prata',serif;
       }
 
-      /* Apply the animation to the class */
-      .blinking-text {
-        animation: blink 2s linear infinite;
+      /* Important Dates Section */
+      .important-dates-section {
+        background: white;
+        padding: 40px 0;
+        position: relative;
+        overflow: hidden;
       }
 
-      .red-text {
-        color: red;
+      .important-dates-container {
+        max-width: 1200px;
+        
+        padding-left: 200px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .dates-content {
+        flex: 1;
+      }
+
+      .dates-content h2 {
+        color: var(--npec-red);
+        font-size: 2.8rem;
+        margin-bottom: 3.5rem;
+        font-weight: 800;
+        font-family: 'Prata',serif;
+      }
+
+      .date-lines {
+        position: relative;
+        padding-left: 30px;
+      }
+
+      .date-lines::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        bottom: 10px;
+        width: 4px;
+        background-color: #ddd;
+        border-radius: 2px;
+      }
+
+      .date-line {
+        position: relative;
+
+        padding-left: 20px;
+      }
+
+      .date-line:last-child {
+        margin-bottom: 0;
+      }
+
+      .date-line::before {
+        content: "";
+        position: absolute;
+        left: -38px;
+        top: 8px;
+        width: 20px;
+        height: 20px;
+        background-color: var(--npec-red);
+        border: 3px solid var(--npec-text-light);
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .date-text strong {
+        display: block;
+        font-size: 1.2rem;
+        font-family: "Inter", sans-serif;
+        color: var(--npec-dark-blue);
+        margin-bottom: 2px;
+      }
+      .date-text span {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--npec-gray);
+        font-family: inherit;
+      }
+
+      /* Sponsors Section */
+      .sponsors-section {
+        background: var(--npec-dark-blue);
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      .sponsors-section h2 {
+        color: white;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        letter-spacing: 2px;
+      }
+
+      .sponsor-logo {
+        max-width: 300px;
+        height: auto;
+        transition: all 0.3s ease;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--npec-dark-blue);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      
+      /* Responsive */
+      @media (max-width: 992px) {
+        .left-bar,
+        .dates-illustration {
+          display: none;
+        }
+        .navbar {
+          position: relative;
+          right: 0;
+          top: 0;
+          width: 100%;
+          border-radius: 0;
+        }
+        .content-wrapper {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .hero-section h1 {
+          font-size: 2.2rem;
+        }
+        .important-dates-container {
+          padding: 0 15px;
+          text-align: center;
+        }
+        .dates-content {
+          padding-left: 0;
+        }
+        .date-lines {
+          text-align: left;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="d-none">
-      <img src="/assets/cover.jpeg" alt="cover" />
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bolder cursor-pointer" href="/">NPEC 2025</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <svg class="left-decorator-top" width="75" height="300" viewBox="0 0 165 819" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_dd_75_7)">
+        <path d="M0 0H115.506V662.68C115.506 726.472 63.7921 778.186 0 778.186V0Z" fill="#870117" />
+        <g transform="translate(35, 80)">
+          <path d="M16.7357 613.781C9.01866 611.639 3.30064 604.607 3.30064 596.177L3.30061 21.0509C3.30061 12.6213 8.97215 5.54224 16.7356 3.44647L16.7356 0.000121339C7.15912 2.18903 -2.65076e-05 10.8049 -2.60597e-05 21.0509L-9.20162e-07 596.177C-4.72295e-07 606.423 7.15915 615.039 16.7357 617.228L16.7357 613.781Z" fill="white" />
+          <path d="M27.1015 3.63361C34.4466 6.00885 39.7927 12.9015 39.7927 21.0518L39.7928 596.178C39.7928 604.328 34.4466 611.267 27.1016 613.596L27.1016 617.042C36.3062 614.574 43.1399 606.191 43.1399 596.178L43.1399 21.0518C43.1399 11.0386 36.3061 2.65558 27.1015 0.187195L27.1015 3.63361Z" fill="white" />
+          <path d="M36.4933 278.971L36.4933 259.038L6.60156 288.984L6.60156 308.87L36.4933 278.971Z" fill="white" />
+          <path d="M36.4933 304.912L36.4933 283.628L6.60156 313.575L6.60156 334.812L36.4933 304.912Z" fill="white" />
+          <path d="M36.4933 333.926L36.4933 309.569L6.60156 339.515L6.60156 363.872L36.4933 333.926Z" fill="white" />
+          <path d="M36.4933 369.088L36.4933 338.583L6.60156 368.529L6.60156 399.034L36.4933 369.088Z" fill="white" />
+          <path d="M36.4937 410.072L36.4937 373.792C26.5453 383.759 16.5968 393.725 6.64844 403.692L6.64844 439.972L36.4937 410.072Z" fill="white" />
+          <path d="M36.4937 462.326L36.4937 414.729L6.64844 444.629L6.64844 492.226C16.5504 482.259 26.4988 472.293 36.4937 462.326Z" fill="white" />
+          <path d="M36.4933 525.805L36.4933 466.984L6.60156 496.883L6.60156 555.751L36.4933 525.805Z" fill="white" />
+          <path d="M6.60156 560.409L6.60156 596.176C6.60156 604.42 13.2958 611.126 21.5242 611.126C29.7525 611.126 36.4468 604.42 36.4468 596.176L36.4468 530.509L6.60156 560.409Z" fill="white" />
+          <path d="M36.4933 254.381L36.4933 235.845L6.60156 265.745L6.60156 284.281L36.4933 254.381Z" fill="white" />
+          <path d="M36.4933 231.141L36.4933 214.282L6.60156 244.228L6.60156 261.087L36.4933 231.141Z" fill="white" />
+        </g>
+      </g>
+      <defs>
+        <filter id="filter0_dd_75_7" x="-31" y="-40" width="195.506" height="858.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feOffset dx="9" />
+          <feGaussianBlur stdDeviation="20" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_7" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow_75_7" result="effect2_dropShadow_75_7" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_75_7" result="shape" />
+        </filter>
+      </defs>
+    </svg>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/committee.html"
-                    >Committee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/tracks.html"
-                    >Tracks</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/contact.html"
-                    >Contact Us</a
-                  >
-                </li>
+    <header>
+      <nav class="navbar navbar-expand-lg">
+      
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            
+            <ul class="navbar-nav ms-auto">
+              
+              <li class="nav-item"><a class="nav-link" style="font-size: medium;" href="index.html">NPEC 2025</a></li>
+           
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Home </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownHome">
+                  <li><a class="dropdown-item" href="./pages/home/committee.html">Committee</a></li>
+                  <li><a class="dropdown-item" href="./pages/home/tracks.html">Tracks</a></li>
+                  <li><a class="dropdown-item" href="./pages/home/contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button" data-bs-toggle="dropdown" aria-expanded="false"> For Authors </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownAuthors">
+                  <li><a class="dropdown-item" href="./pages/authors/call-for-papers.html">Call for Papers</a></li>
+                  <li><a class="dropdown-item" href="./pages/authors/call-for-special-sessions.html">Call for Special Session</a></li>
+                  <li><a class="dropdown-item" href="./pages/authors/call-for-tutorials.html">Call for Tutorials</a></li>
+                  <li><a class="dropdown-item" href="./pages/authors/final-paper-submission.html">Final Paper Submission</a></li>
+                  <li><a class="dropdown-item" href="./pages/authors/presentation-guideline.html">Presentation Guidelines</a></li>
+                  <li><a class="dropdown-item" href="./pages/authors/call-for-student-poster-presentation.html">Call for Student Poster Presentation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgram" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Program </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownProgram">
+                  <li><a class="dropdown-item" href="./pages/program/technical-programme.html">Technical Programme</a></li>
+                  <li><a class="dropdown-item" href="./pages/program/speakers.html">Speakers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./pages/awards.html">Awards</a></li>
+              <li class="nav-item"><a class="nav-link" href="./pages/venue.html">Venue</a></li>
+              <li class="nav-item"><a class="nav-link" href="./pages/accommodation.html">Accommodation</a></li>
+              <li class="nav-item"><a class="nav-link" href="./pages/sponsorship.html">Sponsorship</a></li>
+              <li class="nav-item"><a class="nav-link" href="./pages/registration.html">Registration</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div id="radial-dots-bg"></div>
+      <div class="radial-pattern-container">
+        <h1>12th National Power Electronics Conference 2025</h1>
+        <p class="subtitle">at National Institute of Technology Calicut</p>
+        <p class="location">NIT Calicut, India</p>
+        <p class="date">14th to 16th December, 2025</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="about-container">
+            <h2>About the Conference</h2>
+            <h2 style="color: #b71c1cbd">2025</h2>
+            <p>
+              The National Power Electronics Conference (NPEC 2025) is a biennial conference of Power Electronics forum in India. The conference focuses on dissemination of the potential research findings in Industries and Academia. The NPEC was first organized at IIT Bombay in 2003 and subsequently in IIT Kharagpur (2005), IISc Bangalore (2007), IIT Roorkee (2010), IIEST Shipur (2011), IIT Kanpur (2013), IIT Bombay (2015), College of Engineering, Pune (2017), National Institute of Technology Tiruchirappalli (2019), IIT Bhubaneswar (2021) and Indian Institute of Technology Guwahati (2023) to enhance the interaction of the peers in the field of Power Electronics.
+            </p>
+            <p>
+              The 11th edition of this prestigious conference (NPEC 2025) is to be held at National
+              Institute of Technology Calicut during 14-16 December 2025. It would be a proud moment
+              for NIT Calicut to organize this conference which will be a formal get-together for
+              the power electronics community.
+            </p>
+            <p>
+              This NPEC 2025 will be a launch pad for many researchers to exhibit the influence of
+              Power Electronics on various applications viz. industry, domestic, commercial,
+              mobility and electric utility systems.
+            </p>
+          </div>
+          <div class="announcements-container">
+            <div>
+              <h2>Announcements</h2>
+              <ul class="list-unstyled mt-4" style="font-size: 1.1rem">
+                <li></li>
               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                For Authors
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-papers.html"
-                    >Call for Papers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-special-sessions.html"
-                    >Call for Special Session</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-tutorials.html"
-                  >
-                    Call for Tutorials</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/final-paper-submission.html"
-                    >Final Paper Submission</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/presentation-guideline.html"
-                    >Presentation Guidelines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-student-poster-presentation.html"
-                    >Call for Student Poster Presentation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/technical-programme.html"
-                    >Technical Programme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/speakers.html"
-                    >Speakers</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/awards.html"
-                >Awards
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/venue.html"
-                >Venue</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link cursor-pointer"
-                href="/pages/accommodation.html"
-                >Accommodation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/sponsorship.html"
-                >Sponsorship</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/registration.html"
-                >Registration</a
-              >
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
-    </nav>
-    <div class="bg-white py-1 z-100">
-      <marquee
-        behavior="scroll"
-        direction="left"
-        scrollamount="6"
-        class="fw-bold text-dark"
-      >
-        <span class="blinking-text">
-          | Last date for regular sessions is over</span
-          >|
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-          Special sessions are open now. Last date for submitting manuscripts for special session is 6th October 2025 |
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-          Student registrations are valid for inclusion of papers in the
-          conference proceedings. |
-        </span>
-      </marquee>
-    </div>
-    <!-- <div class="bg-black py-1 z-100">
-    <marquee behavior="scroll" direction="left" scrollamount="6" class="fw-normal text-white">
-      | Last date of paper submission is 31st July. | Student registrations are valid for inclusion of papers in the
-      conference proceedings.|
-    </marquee>
-  </div> -->
-    <div class="video-container">
-      <video autoplay muted loop>
-        <source src="assets/nitc.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    </section>
 
-      <div class="overlay">
-        <h1>12<sup>th</sup> National Power Electronics Conference 2025</h1>
-        <p>at National Institute of Technology Calicut</p>
+    <section class="important-dates-section">
+      <svg width="95" height="179" viewBox="0 0 190 357" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_75_135)">
+<path d="M-3.71957 64.4458L-14.6305 64.4458C-14.6521 64.4458 -14.6664 64.4543 -14.6879 64.4628C-15.0684 61.9573 -16.9204 60.0549 -19.1456 60.0549C-21.6437 60.0549 -23.6823 62.4584 -23.6823 65.4225C-23.6823 68.3866 -21.6508 70.7902 -19.1456 70.7902C-16.9204 70.7902 -15.0684 68.8877 -14.6879 66.3823C-14.6664 66.3823 -14.6521 66.3993 -14.6305 66.3993L-3.71239 66.3992L-3.71239 74.3743L-26.9915 74.3743C-26.9986 74.3743 -27.0058 74.3828 -27.013 74.3828C-27.1135 74.3828 -27.2068 74.4083 -27.3001 74.4507C-27.3935 74.4932 -27.4724 74.5611 -27.5442 74.6461C-27.5514 74.6546 -27.5585 74.6546 -27.5657 74.6631L-34.3635 82.7061C-35.0957 82.1115 -35.9786 81.7548 -36.9333 81.7548C-39.4314 81.7548 -41.4628 84.1584 -41.4628 87.1225C-41.4628 90.0866 -39.4314 92.4901 -36.9333 92.4901C-34.4353 92.4901 -32.3967 90.0866 -32.3967 87.1225C-32.3967 85.9929 -32.691 84.9482 -33.2007 84.0819L-26.6469 76.3277L-3.71239 76.3277L-3.71239 83.4704L-13.3456 83.4704C-13.3528 83.4704 -13.36 83.4789 -13.3671 83.4789C-13.4676 83.4789 -13.561 83.5044 -13.6543 83.5469C-13.7476 83.5893 -13.8265 83.6573 -13.8983 83.7422C-13.9055 83.7507 -13.9127 83.7507 -13.9199 83.7592L-20.7177 91.8022C-21.4499 91.2077 -22.3328 90.851 -23.2875 90.851C-25.7855 90.851 -27.8241 93.2545 -27.8241 96.2186C-27.8241 99.1827 -25.7927 101.586 -23.2875 101.586C-20.7895 101.586 -18.7508 99.1827 -18.7508 96.2186C-18.7508 95.089 -19.0451 94.0444 -19.5548 93.1781L-13.001 85.4239L-3.71239 85.4239L-3.71238 157.726L-13.2379 168.996L-48.9497 168.996L-48.9497 174.033C-48.9785 174.101 -49 174.194 -49 174.304L-49 183.766C-49 183.893 -48.9784 184.021 -48.9354 184.139C-48.8995 184.241 -48.8492 184.326 -48.7918 184.403C-48.7775 184.42 -48.7775 184.437 -48.7631 184.454L-45.9277 187.808L-45.9277 219.556C-45.9277 219.683 -45.9062 219.811 -45.8631 219.929C-45.8344 220.006 -45.7841 220.074 -45.7411 220.142C-45.7195 220.176 -45.7123 220.21 -45.6836 220.244L-41.1541 225.603L-41.1541 234.818C-43.2646 235.277 -44.8653 237.459 -44.8653 240.092C-44.8653 243.048 -42.8339 245.46 -40.3286 245.46C-37.8234 245.46 -35.7992 243.056 -35.7992 240.092C-35.7992 237.468 -37.3999 235.277 -39.5103 234.818L-39.5103 225.204C-39.5103 225.076 -39.5319 224.949 -39.5749 224.83C-39.6036 224.745 -39.6539 224.686 -39.697 224.618C-39.7185 224.584 -39.7257 224.55 -39.7544 224.516L-44.2839 219.157L-44.2839 187.409C-44.2839 187.282 -44.3054 187.155 -44.3485 187.036C-44.3844 186.934 -44.4346 186.849 -44.4992 186.772C-44.5136 186.755 -44.5136 186.738 -44.5279 186.721L-47.3633 183.367L-47.3633 174.304L-43.1641 174.304L-43.1641 183.766C-43.1641 183.893 -43.1425 184.021 -43.0995 184.139C-43.0636 184.241 -43.0133 184.326 -42.9559 184.403C-42.9415 184.42 -42.9415 184.437 -42.9272 184.454L-40.0918 187.808L-40.0918 219.556C-40.0918 219.683 -40.0702 219.811 -40.0272 219.929C-39.9985 220.006 -39.9482 220.074 -39.9051 220.142C-39.8836 220.176 -39.8764 220.21 -39.8477 220.244L-35.3182 225.603L-35.3182 252.772C-37.4286 253.231 -39.0294 255.414 -39.0294 258.047C-39.0294 261.002 -36.9979 263.414 -34.4927 263.414C-31.9875 263.414 -29.9561 261.011 -29.9561 258.047C-29.9561 255.422 -31.5568 253.231 -33.6672 252.772L-33.6672 225.204C-33.6672 225.076 -33.6888 224.949 -33.7318 224.83C-33.7605 224.745 -33.8108 224.686 -33.8539 224.618C-33.8754 224.584 -33.8826 224.55 -33.9113 224.516L-38.4408 219.157L-38.4408 187.409C-38.4408 187.282 -38.4623 187.155 -38.5054 187.036L-38.5054 187.027C-38.5126 187.01 -38.5197 187.002 -38.5269 186.993C-38.5628 186.891 -38.6131 186.798 -38.6777 186.721C-38.6777 186.721 -38.6777 186.721 -38.6848 186.721L-41.5202 183.367L-41.5202 174.304L-37.3784 174.304L-37.3784 183.766C-37.3784 183.893 -37.3569 184.021 -37.3138 184.139C-37.2779 184.241 -37.2276 184.326 -37.1702 184.403C-37.1559 184.42 -37.1559 184.437 -37.1415 184.454L-34.3061 187.808L-34.3061 219.556C-34.3061 219.683 -34.2846 219.811 -34.2415 219.929C-34.2128 220.006 -34.1625 220.074 -34.1195 220.142C-34.0979 220.176 -34.0907 220.21 -34.062 220.244L-29.5326 225.603L-29.5326 273.113C-31.643 273.572 -33.2437 275.755 -33.2437 278.388C-33.2437 281.343 -31.2123 283.755 -28.7071 283.755C-26.209 283.755 -24.1704 281.352 -24.1704 278.388C-24.1704 275.763 -25.7711 273.572 -27.8816 273.113L-27.8816 225.204C-27.8816 225.076 -27.9031 224.949 -27.9462 224.83C-27.9749 224.745 -28.0251 224.686 -28.0682 224.618C-28.0897 224.584 -28.0969 224.55 -28.1256 224.516L-32.6551 219.157L-32.6551 187.409C-32.6551 187.282 -32.6766 187.155 -32.7197 187.036C-32.7484 186.968 -32.7915 186.908 -32.8274 186.84C-32.8489 186.798 -32.8633 186.755 -32.892 186.721L-35.7274 183.367L-35.7274 174.304L-31.5855 174.304L-31.5855 183.766C-31.5855 183.893 -31.564 184.021 -31.5209 184.139C-31.485 184.241 -31.4348 184.326 -31.3774 184.403C-31.363 184.42 -31.363 184.437 -31.3487 184.454L-28.5132 187.808L-28.5132 219.556C-28.5132 219.683 -28.4917 219.811 -28.4486 219.929C-28.4199 220.014 -28.3697 220.082 -28.3266 220.15C-28.3051 220.184 -28.2979 220.218 -28.2764 220.244L-23.7469 225.603L-23.7469 296.045L-41.8289 317.431C-42.5611 316.836 -43.444 316.479 -44.3987 316.479C-46.8967 316.479 -48.9354 318.883 -48.9354 321.847C-48.9354 324.803 -46.9039 327.215 -44.3987 327.215C-41.8935 327.215 -39.8621 324.811 -39.8621 321.847C-39.8621 320.717 -40.1564 319.673 -40.666 318.806L-22.3471 297.132L-22.1102 296.852L-22.1102 224.805L-26.8766 219.165L-26.8766 187.418C-26.8766 187.29 -26.8981 187.163 -26.9412 187.044C-26.9771 186.942 -27.0273 186.857 -27.092 186.781C-27.1063 186.764 -27.1063 186.747 -27.1207 186.73L-29.9561 183.375L-29.9561 174.313L-25.8142 174.313L-25.8142 183.774C-25.8142 183.902 -25.7927 184.029 -25.7496 184.148C-25.7137 184.25 -25.6635 184.335 -25.6061 184.411C-25.5917 184.428 -25.5917 184.445 -25.5773 184.462L-22.7419 187.817L-22.7419 219.564C-22.7419 219.692 -22.7204 219.819 -22.6773 219.938C-22.6486 220.014 -22.5984 220.082 -22.5553 220.15C-22.5338 220.184 -22.5266 220.218 -22.4979 220.252L-17.9684 225.611L-17.9684 304.105L-41.8289 332.328C-42.5611 331.733 -43.444 331.376 -44.3987 331.376C-46.8967 331.376 -48.9354 333.78 -48.9354 336.744C-48.9354 339.708 -46.9039 342.112 -44.3987 342.112C-41.8935 342.112 -39.8621 339.708 -39.8621 336.744C-39.8621 335.614 -40.1564 334.57 -40.666 333.703L-16.5686 305.192L-16.3317 304.912L-16.3317 225.212C-16.3317 225.085 -16.3533 224.957 -16.3964 224.839C-16.4251 224.754 -16.4753 224.694 -16.5184 224.626C-16.5399 224.592 -16.5471 224.558 -16.5758 224.524L-21.1053 219.165L-21.1053 187.418C-21.1053 187.29 -21.1268 187.163 -21.1699 187.044C-21.2058 186.942 -21.256 186.857 -21.3206 186.781C-21.335 186.764 -21.335 186.747 -21.3494 186.73L-24.1848 183.375L-24.1848 174.313L-20.0429 174.313L-20.0429 183.774C-20.0429 183.902 -20.0214 184.029 -19.9783 184.148C-19.9424 184.25 -19.8922 184.335 -19.8347 184.411C-19.8204 184.428 -19.8204 184.445 -19.806 184.462L-16.9706 187.817L-16.9706 219.564C-16.9706 219.692 -16.9491 219.819 -16.906 219.938C-16.8773 220.014 -16.827 220.082 -16.784 220.15C-16.7624 220.184 -16.7553 220.218 -16.7266 220.252L-12.1971 225.611L-12.1971 312.165L-41.8289 347.224C-42.5611 346.63 -43.444 346.273 -44.3987 346.273C-46.8967 346.273 -48.9354 348.677 -48.9354 351.641C-48.9354 354.596 -46.9039 357.009 -44.3987 357.009C-41.8935 357.009 -39.8621 354.605 -39.8621 351.641C-39.8621 350.511 -40.1564 349.467 -40.666 348.6L-10.7901 313.252L-10.5532 312.972L-10.5533 225.204C-10.5533 225.076 -10.5748 224.949 -10.6179 224.83C-10.6466 224.745 -10.6968 224.686 -10.7399 224.618C-10.7614 224.584 -10.7686 224.55 -10.7973 224.516L-15.3268 219.157L-15.3268 187.409C-15.3268 187.282 -15.3483 187.155 -15.3914 187.036C-15.4273 186.934 -15.4775 186.849 -15.5421 186.772C-15.5565 186.755 -15.5565 186.738 -15.5709 186.721L-18.4063 183.367L-18.4063 174.304L-11.3788 174.304L0.788382 159.909L0.695067 159.798L0.788382 159.798L0.788373 60.2247L51.6894 -8.80254e-06L45.3223 -8.24591e-06L-3.71957 58.0505L-3.71957 64.4458ZM-19.1528 68.8453C-20.7464 68.8453 -22.0457 67.308 -22.0457 65.4225C-22.0457 63.5371 -20.7464 61.9998 -19.1528 61.9998C-17.5592 61.9998 -16.26 63.5371 -16.26 65.4225C-16.26 67.308 -17.5592 68.8453 -19.1528 68.8453ZM-36.9405 90.5197C-38.5341 90.5197 -39.8334 88.9825 -39.8334 87.097C-39.8334 85.2115 -38.5341 83.6743 -36.9405 83.6743C-35.347 83.6743 -34.0477 85.2115 -34.0477 87.097C-34.0477 88.991 -35.3398 90.5197 -36.9405 90.5197ZM-23.2947 99.6074C-24.8882 99.6074 -26.1875 98.0701 -26.1875 96.1846C-26.1875 94.2992 -24.8882 92.7619 -23.2947 92.7619C-21.7011 92.7619 -20.4018 94.2992 -20.4018 96.1846C-20.4018 98.0701 -21.7011 99.6074 -23.2947 99.6074ZM-31.5999 258.047C-31.5999 259.932 -32.8992 261.469 -34.4927 261.469C-36.0863 261.469 -37.3856 259.932 -37.3856 258.047C-37.3856 256.161 -36.0863 254.624 -34.4927 254.624C-32.8992 254.624 -31.5999 256.161 -31.5999 258.047ZM-25.8214 278.388C-25.8214 280.273 -27.1207 281.81 -28.7142 281.81C-30.3078 281.81 -31.6071 280.273 -31.6071 278.388C-31.6071 276.502 -30.3078 274.965 -28.7142 274.965C-27.1207 274.965 -25.8214 276.502 -25.8214 278.388ZM-44.3987 325.27C-45.9923 325.27 -47.2915 323.732 -47.2915 321.847C-47.2915 319.962 -45.9923 318.424 -44.3987 318.424C-42.8051 318.424 -41.5059 319.962 -41.5059 321.847C-41.5059 323.732 -42.8051 325.27 -44.3987 325.27ZM-44.3987 340.167C-45.9923 340.167 -47.2915 338.629 -47.2915 336.744C-47.2915 334.858 -45.9923 333.321 -44.3987 333.321C-42.8051 333.321 -41.5059 334.858 -41.5059 336.744C-41.5059 338.629 -42.8051 340.167 -44.3987 340.167ZM-44.3987 355.064C-45.9923 355.064 -47.2915 353.526 -47.2915 351.641C-47.2915 349.755 -45.9923 348.218 -44.3987 348.218C-42.8051 348.218 -41.5059 349.755 -41.5059 351.641C-41.5059 353.526 -42.8051 355.064 -44.3987 355.064ZM-37.443 240.092C-37.443 241.978 -38.7423 243.515 -40.3358 243.515C-41.9294 243.515 -43.2287 241.978 -43.2287 240.092C-43.2287 238.207 -41.9294 236.669 -40.3358 236.669C-38.7423 236.669 -37.443 238.207 -37.443 240.092Z" fill="#870117"/>
+<path d="M150.261 26.2862C148.043 26.2862 146.198 28.1802 145.803 30.6772C118.555 30.3969 90.897 30.3969 63.5766 30.6857L63.5766 20.2561L63.5838 20.2561C90.495 19.9758 161.797 19.9758 189.993 20.2391L189.993 18.2942C161.782 18.0224 90.495 18.0309 63.5766 18.3112L63.5766 9.10462L63.5838 9.10462C90.495 8.82435 161.797 8.82434 189.993 9.08763L189.993 7.1427C161.789 6.87942 90.5022 6.87942 63.5838 7.1597L63.5838 -5.74453e-06L59.0686 -5.3498e-06L59.0686 62.9341L41.848 62.9341L41.848 64.2929L30.2623 64.293C30.0541 61.8299 28.2955 59.902 26.1563 59.902C23.8808 59.902 22.036 62.0932 22.036 64.7771C22.036 67.4694 23.888 69.6521 26.1563 69.6521C28.2883 69.6521 30.0541 67.7242 30.2623 65.2612L41.848 65.2612L41.848 66.6201L59.0686 66.6201L59.0686 77.814L41.848 77.814L41.848 79.1729L16.7672 79.1729C16.559 76.7099 14.8004 74.782 12.6612 74.782C10.3857 74.782 8.54092 76.9732 8.54092 79.657C8.54092 82.3493 10.3929 84.5321 12.6612 84.5321C14.7932 84.5321 16.559 82.6041 16.7672 80.1411L41.8408 80.1411L41.8408 81.5L59.0615 81.5L59.0615 92.694L41.8408 92.694L41.8408 94.0529L30.2551 94.0529C30.047 91.5899 28.2883 89.6619 26.1492 89.6619C23.8737 89.6619 22.0289 91.8531 22.0289 94.537C22.0289 97.2293 23.8808 99.412 26.1492 99.412C28.2811 99.412 30.047 97.4841 30.2551 95.0211L41.8408 95.0211L41.8408 96.38L59.0615 96.38L59.0615 107.574L41.8408 107.574L41.8408 108.933L24.5125 108.933C24.3044 106.47 22.5457 104.542 20.4137 104.542C18.1382 104.542 16.2934 106.733 16.2934 109.417C16.2934 112.109 18.1454 114.292 20.4137 114.292C22.5457 114.292 24.3115 112.364 24.5125 109.901L41.8408 109.901L41.8408 111.26L59.0615 111.26L59.0615 118.827L11.6132 175.009L11.6132 274.651L5.58349 281.785C4.83695 281.292 3.97556 281.004 3.05674 281.004C0.19262 281.004 -2.12595 283.747 -2.12595 287.136C-2.12595 290.524 0.192621 293.268 3.05674 293.268C5.92087 293.268 8.23944 290.524 8.23944 287.136C8.23944 286.838 8.21791 286.55 8.18202 286.261L16.1283 276.859L16.035 276.749L16.1283 276.749L16.1283 177.192L20.9019 171.544L20.9019 218.783C20.4425 218.876 19.9974 219.114 19.66 219.522C18.7484 220.6 18.7484 222.359 19.66 223.437C20.1051 223.964 20.6865 224.244 21.311 224.244C21.9355 224.244 22.5242 223.955 22.962 223.437C23.4071 222.911 23.644 222.223 23.644 221.484C23.644 220.745 23.3999 220.048 22.962 219.53C22.6175 219.123 22.1796 218.885 21.7202 218.791L21.7202 170.576L25.5247 166.075L25.5247 213.313C25.0653 213.407 24.6202 213.645 24.2828 214.052C23.8378 214.579 23.6009 215.267 23.6009 216.006C23.6009 216.745 23.845 217.441 24.2828 217.959C24.7279 218.486 25.3093 218.766 25.9338 218.766C26.5583 218.766 27.147 218.477 27.5848 217.959C28.4965 216.88 28.4965 215.122 27.5848 214.044C27.2403 213.636 26.8024 213.398 26.343 213.305L26.343 165.259C26.343 165.208 26.3286 165.166 26.3215 165.123L30.1475 160.597L30.1475 207.818C29.6881 207.912 29.2574 208.167 28.9056 208.583C27.994 209.661 27.994 211.419 28.9056 212.498C29.365 213.033 29.9608 213.305 30.5566 213.305C31.1524 213.305 31.7554 213.033 32.2076 212.498C33.1193 211.419 33.1193 209.661 32.2076 208.583C31.8559 208.167 31.418 207.912 30.9658 207.818L30.9658 159.628L34.7703 155.127L34.7703 202.34C34.318 202.434 33.8802 202.688 33.5284 203.105C32.6168 204.183 32.6168 205.941 33.5284 207.02C33.9878 207.555 34.5836 207.827 35.1794 207.827C35.7752 207.827 36.3782 207.555 36.8304 207.02C37.7421 205.941 37.7421 204.183 36.8304 203.105C36.4787 202.688 36.0408 202.434 35.5886 202.34L35.5886 154.549C35.5886 154.439 35.5527 154.346 35.5024 154.261L63.5766 121.044L63.5766 60.2247C63.6268 60.2332 63.6699 60.2587 63.7202 60.2587C73.8056 60.3691 83.7188 60.4286 93.5817 60.4286C103.201 60.4286 112.776 60.3691 122.445 60.2672C122.833 62.7557 124.685 64.6582 126.903 64.6582C129.401 64.6582 131.44 62.2546 131.44 59.2905C131.44 56.3264 129.408 53.9228 126.903 53.9228C124.685 53.9228 122.833 55.8253 122.445 58.3223C102.863 58.5346 83.6542 58.5346 63.7345 58.3138C63.6771 58.3138 63.634 58.3393 63.5766 58.3563L63.5766 51.0182C63.6125 51.0267 63.6484 51.0437 63.6843 51.0437L63.6986 51.0437C85.8435 50.7804 108.821 50.7804 130.234 51.0352C130.621 53.5322 132.466 55.4346 134.692 55.4346C137.19 55.4346 139.228 53.0311 139.228 50.067C139.228 47.1114 137.197 44.6993 134.692 44.6993C132.473 44.6993 130.629 46.5933 130.234 49.0818C108.821 48.827 85.8292 48.827 63.6843 49.0903C63.6484 49.0903 63.6197 49.1072 63.5838 49.1157L63.5838 41.7862C63.634 41.7947 63.6771 41.8201 63.7273 41.8201C76.2606 41.9221 88.844 41.973 101.377 41.973C113.659 41.973 125.905 41.9221 138.022 41.8201C138.41 44.3086 140.262 46.2111 142.48 46.2111C144.978 46.2111 147.017 43.8075 147.017 40.8434C147.017 37.8878 144.985 35.4758 142.48 35.4758C140.262 35.4758 138.41 37.3782 138.022 39.8752C113.537 40.079 88.5497 40.0791 63.7345 39.8667L63.7273 39.8667C63.6771 39.8667 63.6268 39.8922 63.5766 39.9007L63.5766 32.5966L63.5838 32.5966C90.9042 32.3163 118.562 32.3163 145.803 32.5881C146.191 35.0851 148.036 36.9875 150.261 36.9875C152.759 36.9875 154.798 34.584 154.798 31.6199C154.798 28.6898 152.766 26.2862 150.261 26.2862ZM26.1563 68.6839C24.3331 68.6839 22.8544 66.9343 22.8544 64.7771C22.8544 62.6198 24.3331 60.8702 26.1563 60.8702C27.9796 60.8702 29.4583 62.6198 29.4583 64.7771C29.4583 66.9343 27.9796 68.6839 26.1563 68.6839ZM12.6684 83.5724C10.8451 83.5724 9.36641 81.8228 9.36641 79.6655C9.36641 77.5083 10.8451 75.7587 12.6684 75.7587C14.4917 75.7587 15.9704 77.5083 15.9704 79.6655C15.9704 81.8143 14.4917 83.5724 12.6684 83.5724ZM26.1563 98.4523C24.3331 98.4523 22.8544 96.7027 22.8544 94.5455C22.8544 92.3882 24.3331 90.6386 26.1563 90.6386C27.9796 90.6386 29.4583 92.3882 29.4583 94.5455C29.4584 96.7027 27.9796 98.4523 26.1563 98.4523ZM20.4137 113.341C18.5905 113.341 17.1118 111.591 17.1118 109.434C17.1118 107.277 18.5905 105.527 20.4137 105.527C22.237 105.527 23.7157 107.277 23.7157 109.434C23.7157 111.583 22.237 113.341 20.4137 113.341ZM22.395 220.201C22.9908 220.898 22.9908 222.044 22.395 222.741C21.8207 223.42 20.8229 223.42 20.2487 222.741C19.6529 222.044 19.6529 220.898 20.2487 220.201C20.5358 219.862 20.9162 219.675 21.3254 219.675C21.7274 219.675 22.1078 219.862 22.395 220.201ZM27.0178 214.74C27.6135 215.437 27.6135 216.583 27.0178 217.28C26.4435 217.959 25.4457 217.959 24.8715 217.28C24.2757 216.583 24.2757 215.437 24.8715 214.74C25.1586 214.4 25.539 214.214 25.9482 214.214C26.3502 214.205 26.7306 214.392 27.0178 214.74ZM31.6405 209.262C32.2292 209.967 32.2292 211.105 31.6405 211.802C31.0519 212.498 30.0829 212.498 29.4942 211.802C28.9056 211.097 28.9056 209.959 29.4942 209.262C30.0829 208.566 31.0447 208.566 31.6405 209.262ZM36.2633 203.793C36.852 204.497 36.852 205.636 36.2633 206.332C35.6747 207.028 34.7057 207.028 34.117 206.332C33.5284 205.627 33.5284 204.489 34.117 203.793C34.7057 203.096 35.6747 203.096 36.2633 203.793ZM126.903 55.8678C128.497 55.8678 129.796 57.405 129.796 59.2905C129.796 61.176 128.497 62.7132 126.903 62.7132C125.31 62.7132 124.01 61.176 124.01 59.2905C124.01 57.405 125.31 55.8678 126.903 55.8678ZM134.692 46.6527C136.285 46.6527 137.584 48.19 137.584 50.0755C137.584 51.9609 136.285 53.4982 134.692 53.4982C133.098 53.4982 131.799 51.9609 131.799 50.0755C131.799 48.19 133.091 46.6527 134.692 46.6527ZM142.48 37.4462C144.074 37.4462 145.373 38.9834 145.373 40.8689C145.373 42.7544 144.074 44.2916 142.48 44.2916C140.886 44.2916 139.587 42.7544 139.587 40.8689C139.58 38.9749 140.879 37.4462 142.48 37.4462ZM150.261 35.0766C148.668 35.0766 147.368 33.5393 147.368 31.6539C147.368 29.7684 148.668 28.2311 150.261 28.2311C151.855 28.2311 153.154 29.7684 153.154 31.6539C153.154 33.5393 151.862 35.0766 150.261 35.0766Z" fill="#001F2B"/>
+<g clip-path="url(#clip1_75_135)">
+<path d="M47.9873 242.473L119.463 242.473C119.895 245.264 121.953 247.381 124.435 247.381C127.222 247.381 129.496 244.694 129.496 241.382C129.496 238.078 127.23 235.383 124.435 235.383C121.961 235.383 119.895 237.499 119.463 240.29L47.6109 240.29C47.3707 240.29 47.1384 240.404 46.9623 240.603L43.2227 245.036C43.0546 245.235 42.9585 245.52 42.9585 245.805L42.9585 325.159C42.9585 325.605 43.1827 325.994 43.527 326.165C43.6391 326.222 43.7513 326.241 43.8714 326.241C44.1116 326.241 44.3518 326.127 44.528 325.909L53.2162 315.24C53.3844 315.04 53.4724 314.765 53.4724 314.49L53.4724 256.569L56.6755 252.772L128.151 252.772C128.583 255.563 130.641 257.68 133.124 257.68C135.91 257.68 138.184 254.993 138.184 251.68C138.184 248.368 135.918 245.681 133.124 245.681C130.649 245.681 128.583 247.798 128.151 250.589L56.2991 250.589C56.0589 250.589 55.8267 250.703 55.6505 250.902L51.911 255.335C51.7428 255.534 51.6467 255.819 51.6467 256.104L51.6467 314.053L44.7922 322.473L44.7922 246.27L47.9873 242.473ZM124.444 237.556C126.221 237.556 127.671 239.274 127.671 241.382C127.671 243.489 126.221 245.207 124.444 245.207C122.666 245.207 121.216 243.489 121.216 241.382C121.216 239.274 122.658 237.556 124.444 237.556ZM133.124 247.855C134.901 247.855 136.351 249.573 136.351 251.68C136.351 253.788 134.901 255.506 133.124 255.506C131.346 255.506 129.897 253.788 129.897 251.68C129.897 249.573 131.346 247.855 133.124 247.855Z" fill="#870117"/>
+<path d="M38.2735 230.324L34.534 234.756C34.3658 234.956 34.2697 235.241 34.2697 235.525L34.2697 323.925L1.37464 323.925C1.13441 323.925 0.902188 324.039 0.726022 324.238L-5.60796 331.747C-5.87221 332.06 -5.94428 332.525 -5.80815 332.933C-5.66402 333.341 -5.33571 333.607 -4.95935 333.607L48.355 333.607C48.5953 333.607 48.8275 333.493 49.0036 333.294L61.8958 318.012C61.9199 317.983 61.9279 317.945 61.9519 317.907C62.0079 317.831 62.056 317.755 62.088 317.66C62.1361 317.528 62.1601 317.385 62.1601 317.243L62.1601 266.868L65.3631 263.071L136.847 263.071C137.279 265.862 139.337 267.979 141.819 267.979C144.606 267.979 146.88 265.292 146.88 261.989C146.88 258.686 144.614 255.99 141.819 255.99C139.345 255.99 137.279 258.107 136.847 260.898L64.6024 260.898L60.3263 265.966L60.3263 316.778L47.9707 331.424L-2.74926 331.424L1.75099 326.089L35.1826 326.089C35.6871 326.089 36.0954 325.605 36.0954 325.007L36.0954 235.971L39.2985 232.175L110.782 232.175C111.214 234.965 113.272 237.082 115.755 237.082C118.541 237.082 120.816 234.396 120.816 231.083C120.816 227.78 118.549 225.084 115.755 225.084C113.28 225.084 111.214 227.201 110.782 229.991L38.9221 229.991C38.6819 230.001 38.4497 230.115 38.2735 230.324ZM141.811 258.154C143.589 258.154 145.038 259.873 145.038 261.98C145.038 264.087 143.589 265.805 141.811 265.805C140.034 265.805 138.584 264.087 138.584 261.98C138.584 259.873 140.034 258.154 141.811 258.154ZM115.755 227.267C117.532 227.267 118.982 228.985 118.982 231.092C118.982 233.2 117.532 234.918 115.755 234.918C113.977 234.918 112.528 233.2 112.528 231.092C112.528 228.976 113.977 227.267 115.755 227.267Z" fill="#870117"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_75_135">
+<rect width="239" height="357" fill="white" transform="translate(-49)"/>
+</clipPath>
+<clipPath id="clip1_75_135">
+<rect width="152.744" height="108.504" fill="white" transform="translate(-5.87207 225.093)"/>
+</clipPath>
+</defs>
+</svg>
 
-        <div class="icon-text">
-          <i class="fa-solid fa-map-marker-alt"></i> NIT Calicut, India
+      <div class="container">
+  <div class="important-dates-container">
+    <div class="dates-content">
+      <h2>Important Dates</h2>
+      <div class="date-lines">
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Start of Paper Submission</strong>
+            <span>15th Feb, 2025</span>
+          </div>
         </div>
-        <div class="icon-text">
-          <p>
-            <i class="fa-solid fa-calendar-alt"></i> 14<sup>th</sup> to 16<sup
-              >th</sup
-            >
-            December, 2025
-          </p>
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Paper Submission Deadline</strong>
+            <span>7th Sep, 2025 (Hard Deadline)</span>
+          </div>
         </div>
-
-        <a href="/pages/registration.html" class="btn btn-primary cta-button"
-          >Register Now</a
-        >
-        <a href="/pages/authors/call-for-special-sessions.html" class="btn btn-secondary cta-button">
-  Special Sessions
-</a>
-
-        <div id="flipdown" class="flipdown flipdown__theme-light"></div>
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Paper Acceptance Notification</strong>
+            <span>30th Sep, 2025</span>
+          </div>
+        </div>
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Camera-Ready Paper Submission</strong>
+            <span>31st Oct, 2025</span>
+          </div>
+        </div>
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Final Registration Deadline</strong>
+            <span>31st Oct, 2025</span>
+          </div>
+        </div>
+        <div class="date-line">
+          <div class="date-text">
+            <strong>Conference Dates</strong>
+            <span>14th-16th Dec, 2025</span>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</div>
+    </section>
 
-    <section class="about-section">
+    <section class="sponsors-section">
       <div class="container">
-        <h2 class="text-center mb-4">About the Conference</h2>
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <p class="about-content">
-              The National Power Electronics Conference (NPEC 2025) is a
-              biennial conference of Power Electronics forum in India. The
-              conference focuses on dissemination of the potential research
-              findings in Industries and Academia. The NPEC was first organized
-              at IIT Bombay in 2003 and subsequently in IIT Kharagpur (2005),
-              IISc Bangalore (2007), IIT Roorkee (2010), IIEST Shipur (2011),
-              IIT Kanpur (2013), IIT Bombay (2015), College of Engineering, Pune
-              (2017), National Institute of Technology Tiruchirappalli (2019),
-              IIT Bhubaneswar (2021) and Indian Institute of Technology Guwahati
-              (2023) to enhance the interaction of the peers in the field of
-              Power Electronics.
-            </p>
-            <p class="about-content">
-              The 11th edition of this prestigious conference (NPEC 2025) is to
-              be held at National Institute of Technology Calicut during 14-16
-              December 2025. It would be a proud moment for NIT Calicut to
-              organize this conference which will be a formal get-together for
-              the power electronics community. It features extensive exposition
-              on Power Electronics through (1) Plenary talks, (2) Panel
-              discussions, (3) Tutorials and (4) Paper Presentations.
-            </p>
-            <p class="about-content">
-              This NPEC 2025 will be a launch pad for many researchers to
-              exhibit the influence of Power Electronics on various applications
-              viz. industry, domestic, commercial, mobility and electric utility
-              systems. Technical sessions by industrial experts will bring out
-              the recent challenges faced in industry which will provide an
-              opportunity for inspirational minds to solve them. This will lead
-              to a sturdy power electronic community comprising of academicians,
-              research scholars and industry professionals. The development of
-              new circuits and tools for the power electronic systems will also
-              be an outcome of this conference.
-            </p>
+        <h2>OUR SPONSORS</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center">
+            <img src="./assets/Altair_Brandmark.jpg" class="sponsor-logo" alt="Altair Sponsor Logo" />
           </div>
         </div>
       </div>
     </section>
 
     <footer class="footer">
-      <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/flipdown@0.3.2/dist/flipdown.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Unix timestamp (in seconds) for the countdown end date.
-        // End date: December 14, 2025, 9:00 AM
-        const endDate = new Date("2025-12-14T09:00:00").getTime() / 1000;
 
-        // Initialize FlipDown
-        new FlipDown(endDate, "flipdown").start();
-      });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById('radial-dots-bg');
+  const width = container.offsetWidth || container.parentElement.offsetWidth;
+  const height = container.offsetHeight || 400;
+  const dotCount = 30;
+  const dotSize = 7;
+  const dotColor = "rgba(40,40,40,0.35)";
+  const dots = [];
+
+
+  container.innerHTML = "";
+
+  
+  for (let i = 0; i < dotCount; i++) {
+    const dot = document.createElement("div");
+    dot.style.position = "absolute";
+    dot.style.width = `${dotSize}px`;
+    dot.style.height = `${dotSize}px`;
+    dot.style.borderRadius = "50%";
+    dot.style.background = dotColor;
+    dot.style.left = `${Math.random() * (width - dotSize)}px`;
+    dot.style.top = `${Math.random() * (height - dotSize)}px`;
+    dot.style.opacity = 0.7;
+    container.appendChild(dot);
+
+    dots.push({
+      el: dot,
+      x: Math.random() * (width - dotSize),
+      y: Math.random() * (height - dotSize),
+      vx: (Math.random() - 0.5) * 2.5,
+      vy: (Math.random() - 0.5) * 2.5
+    });
+  }
+
+  function animate() {
+    for (const d of dots) {
+      d.x += d.vx;
+      d.y += d.vy;
+
+      // Bounce off walls
+      if (d.x <= 0 || d.x >= width - dotSize) d.vx *= -1;
+      if (d.y <= 0 || d.y >= height - dotSize) d.vy *= -1;
+
+      // Clamp position
+      d.x = Math.max(0, Math.min(width - dotSize, d.x));
+      d.y = Math.max(0, Math.min(height - dotSize, d.y));
+
+      d.el.style.left = `${d.x}px`;
+      d.el.style.top = `${d.y}px`;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});
+</script>
   </body>
 </html>

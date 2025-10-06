@@ -1,465 +1,582 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NPEC 2025 - Committee</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/global.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
     <style>
-      /* Flexbox for Committee Heads */
-      .committee-heads {
-        display: flex;
-        flex-wrap: wrap;
+      :root {
+        --npec-red: #830202;
+        --npec-dark-blue: #1a2332;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+         background: white;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .left-decorator-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      @media (max-width: 992px) {
+        .left-decorator-top {
+          display: none;
+        }
+      }
+
+
+      .navbar {
+        background: var(--npec-red);
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 1px;
+        width: auto;
+        z-index: 10;
+        border-radius: 0 0 50px 50px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 6px 15px var(--npec-dark-blue);
+      }
+
+      .navbar-nav {
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-brand {
+        display: none;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem !important;
+        text-transform: uppercase;
+      }
+
+      .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      .dropdown-menu {
+        background-color: var(--npec-red);
+        border-radius: 10px;
+        border: none;
+        margin-top: 10px;
+      }
+
+      .dropdown-item {
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+      }
+
+      .dropdown-item:hover,
+      .dropdown-item:focus {
+        background-color: #a31818;
+        color: white;
+      }
+
+    
+      .committee-hero {
+        background: white;
+        padding-top: 120px;
+        text-align: center;
+      }
+
+      .committee-hero h1 {
+        font-size: 3rem;
+        color: var(--npec-red);
         margin-bottom: 40px;
+        font-weight: bold;
+      }
+
+      .committee-heads-row {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 80px;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+
+      .head-box {
+        background: white;
+        border: 3px solid var(--npec-red);
+        padding: 30px 40px;
+        text-align: center;
+        min-width: 280px;
+        max-width: 350px;
+        flex: 1;
+      }
+
+      .head-box h3 {
+        font-size: 1.3rem;
+        color: var(--npec-red);
+        margin-bottom: 15px;
+        font-weight: bold;
+      }
+
+      .head-box p {
+        font-size: 1rem;
+        color: #333;
+        margin: 0;
+      }
+
+      /* Committee Grid - 2 columns */
+      .committee-grid-section {
+        background: white;
+        padding: 60px 20px 80px;
+      }
+      
+  
+      
+      .committee-grid {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 40px; 
+        max-width: 1400px;
+        margin: 0 auto;
       }
 
       .committee-box {
-        flex: 1;
-        min-width: 250px;
-        color: black;
-        text-align: center;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        position: relative;
+   
+        width: 100%; 
+        background: #FFFFFF;
+        padding: 30px;
+        clip-path: polygon(
+          0 0, 
+          calc(100% - 20px) 0, 
+          100% 20px, 
+          100% calc(100% - 20px), 
+          calc(100% - 20px) 100%, 
+          0 100%
+        );
+      }
+      
+
+
+      .committee-box::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        clip-path: polygon(
+          0 0, 
+          calc(100% - 20px) 0, 
+          100% 20px, 
+          100% calc(100% - 20px), 
+          calc(100% - 20px) 100%, 
+          0 100%, 
+          0 calc(100% - 3px),
+          calc(100% - 20px) calc(100% - 3px),
+          calc(100% - 3px) calc(100% - 20px),
+          calc(100% - 3px) 20px,
+          calc(100% - 20px) 3px,
+          3px 3px,
+          3px 0
+        );
+        background: #870117;
+        pointer-events: none;
       }
 
-      /* Flexbox for Committees */
-      .committee-container {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
+      .committee-box::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: #870117;
+        pointer-events: none;
       }
 
-      .committee-column {
-        flex: 1;
-        min-width: 250px;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      .committee-title {
+      .committee-box h3 {
         font-size: 1.4rem;
+        color: var(--npec-red);
+        margin-bottom: 20px;
         font-weight: bold;
-        border-bottom: 2px solid #333;
-        color: black;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
       }
 
-      .committee-list {
+      .committee-box ul {
         list-style: none;
         padding: 0;
+        margin: 0;
       }
 
-      .committee-list li {
-        font-size: 1rem;
-        padding: 5px 0;
+      .committee-box ul li {
+        font-size: 0.95rem;
+        color: #333;
+        padding: 8px 0;
+        line-height: 1.5;
+      }
+
+      .committee-box ul li strong {
+        color: #000;
+      }
+
+      /* Contact Footer */
+      .contact-footer {
+        background: var(--npec-red);
+        color: white;
+        padding: 40px 20px;
+        margin-top: 60px;
+      }
+
+      .contact-footer h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .footer-bottom {
+        background: var(--npec-dark-blue);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .navbar {
+          position: relative;
+          right: 0;
+          width: 100%;
+          border-radius: 0;
+        }
+        
+        .committee-hero h1 {
+          font-size: 2rem;
+        }
+        
+        .committee-heads-row {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .head-box {
+          max-width: 100%;
+        }
+       
       }
     </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+</head>
+
+<body>
+    <svg class="left-decorator-top" width="75" height="300" viewBox="0 0 165 819" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g filter="url(#filter0_dd_75_7)">
+        <path d="M0 0H115.506V662.68C115.506 726.472 63.7921 778.186 0 778.186V0Z" fill="#870117" />
+        <g transform="translate(35, 80)">
+          <path d="M16.7357 613.781C9.01866 611.639 3.30064 604.607 3.30064 596.177L3.30061 21.0509C3.30061 12.6213 8.97215 5.54224 16.7356 3.44647L16.7356 0.000121339C7.15912 2.18903 -2.65076e-05 10.8049 -2.60597e-05 21.0509L-9.20162e-07 596.177C-4.72295e-07 606.423 7.15915 615.039 16.7357 617.228L16.7357 613.781Z" fill="white" />
+          <path d="M27.1015 3.63361C34.4466 6.00885 39.7927 12.9015 39.7927 21.0518L39.7928 596.178C39.7928 604.328 34.4466 611.267 27.1016 613.596L27.1016 617.042C36.3062 614.574 43.1399 606.191 43.1399 596.178L43.1399 21.0518C43.1399 11.0386 36.3061 2.65558 27.1015 0.187195L27.1015 3.63361Z" fill="white" />
+          <path d="M36.4933 278.971L36.4933 259.038L6.60156 288.984L6.60156 308.87L36.4933 278.971Z" fill="white" />
+          <path d="M36.4933 304.912L36.4933 283.628L6.60156 313.575L6.60156 334.812L36.4933 304.912Z" fill="white" />
+          <path d="M36.4933 333.926L36.4933 309.569L6.60156 339.515L6.60156 363.872L36.4933 333.926Z" fill="white" />
+          <path d="M36.4933 369.088L36.4933 338.583L6.60156 368.529L6.60156 399.034L36.4933 369.088Z" fill="white" />
+          <path d="M36.4937 410.072L36.4937 373.792C26.5453 383.759 16.5968 393.725 6.64844 403.692L6.64844 439.972L36.4937 410.072Z" fill="white" />
+          <path d="M36.4937 462.326L36.4937 414.729L6.64844 444.629L6.64844 492.226C16.5504 482.259 26.4988 472.293 36.4937 462.326Z" fill="white" />
+          <path d="M36.4933 525.805L36.4933 466.984L6.60156 496.883L6.60156 555.751L36.4933 525.805Z" fill="white" />
+          <path d="M6.60156 560.409L6.60156 596.176C6.60156 604.42 13.2958 611.126 21.5242 611.126C29.7525 611.126 36.4468 604.42 36.4468 596.176L36.4468 530.509L6.60156 560.409Z" fill="white" />
+          <path d="M36.4933 254.381L36.4933 235.845L6.60156 265.745L6.60156 284.281L36.4933 254.381Z" fill="white" />
+          <path d="M36.4933 231.141L36.4933 214.282L6.60156 244.228L6.60156 261.087L36.4933 231.141Z" fill="white" />
+        </g>
+      </g>
+      <defs>
+        <filter id="filter0_dd_75_7" x="-31" y="-40" width="195.506" height="858.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feOffset dx="9" />
+          <feGaussianBlur stdDeviation="20" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_7" />
+          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow_75_7" result="effect2_dropShadow_75_7" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_75_7" result="shape" />
+        </filter>
+      </defs>
+    </svg>
+
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" style="font-size: medium;" href="../../index.html">NPEC 2025</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-bs-toggle="dropdown">Home</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./committee.html">Committee</a></li>
+                  <li><a class="dropdown-item" href="./tracks.html">Tracks</a></li>
+                  <li><a class="dropdown-item" href="./contact.html">Contact Us</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button" data-bs-toggle="dropdown">For Authors</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../authors/call-for-papers.html">Call for Papers</a></li>
+                  <li><a class="dropdown-item" href="../authors/call-for-special-sessions.html">Call for Special Session</a></li>
+                  <li><a class="dropdown-item" href="../authors/call-for-tutorials.html">Call for Tutorials</a></li>
+                  <li><a class="dropdown-item" href="../authors/final-paper-submission.html">Final Paper Submission</a></li>
+                  <li><a class="dropdown-item" href="../authors/presentation-guideline.html">Presentation Guidelines</a></li>
+                  <li><a class="dropdown-item" href="../authors/call-for-student-poster-presentation.html">Call for Student Poster Presentation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgram" role="button" data-bs-toggle="dropdown">Program</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../program/technical-programme.html">Technical Programme</a></li>
+                  <li><a class="dropdown-item" href="../program/speakers.html">Speakers</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="../awards.html">Awards</a></li>
+              <li class="nav-item"><a class="nav-link" href="../venue.html">Venue</a></li>
+              <li class="nav-item"><a class="nav-link" href="../accommodation.html">Accommodation</a></li>
+              <li class="nav-item"><a class="nav-link" href="../sponsorship.html">Sponsorship</a></li>
+              <li class="nav-item"><a class="nav-link" href="../registration.html">Registration</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="committee-hero">
       <div class="container">
-        <a class="navbar-brand fw-bolder cursor-pointer" href="/">NPEC 2025</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/committee.html"
-                    >Committee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/tracks.html"
-                    >Tracks</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/contact.html"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                For Authors
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-papers.html"
-                    >Call for Papers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-special-sessions.html"
-                    >Call for Special Session</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-tutorials.html"
-                  >
-                    Call for Tutorials</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/final-paper-submission.html"
-                    >Final Paper Submission</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/presentation-guideline.html"
-                    >Presentation Guidelines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-student-poster-presentation.html"
-                    >Call for Student Poster Presentation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/technical-programme.html"
-                    >Technical Programme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/speakers.html"
-                    >Speakers</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/awards.html"
-                >Awards
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/venue.html"
-                >Venue</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link cursor-pointer"
-                href="/pages/accommodation.html"
-                >Accommodation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/sponsorship.html"
-                >Sponsorship</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/registration.html"
-                >Registration</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Flexbox Layout for Committee Heads -->
-    <section class="container text-center">
-      <h2 class="mb-5 mt-4">Committee</h2>
-      <div class="committee-heads">
-        <div class="committee-box">
-          <h5><strong>General Chair</strong></h5>
-          <p>Sindhu T. K., Professor & Head, NIT Calicut</p>
-        </div>
-        <div class="committee-box">
-          <h5><strong>Patron</strong></h5>
-          <p>Prof. Prasad Krishna, Director, NIT Calicut</p>
-        </div>
-        <div class="committee-box">
-          <h5><strong>Organizing Chair</strong></h5>
-          <p>Kumaravel S, Department of Electrical Engineering</p>
+        <h1>Committee</h1>
+        
+        <div class="committee-heads-row">
+          <div class="head-box">
+            <h3>General Chair</h3>
+            <p>Sindhu T. K., Professor & Head, NIT Calicut</p>
+          </div>
+          <div class="head-box">
+            <h3>Patron</h3>
+            <p>Prof. Prasad Krishna, Director, NIT Calicut</p>
+          </div>
+          <div class="head-box">
+            <h3>Organizing Chair</h3>
+            <p>Kumaravel S, Department of Electrical Engineering</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Flexbox Committee Layout -->
-    <section class="container committee-container">
-      <!-- Column 1: Advisory Committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Advisory Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Kishore Chatterjee</strong>, IIT Bombay</li>
-          <li><strong>Bhim Singh</strong>, IIT Delhi</li>
-          <li><strong>Krishna Vasudevan</strong>, IIT Madras</li>
-          <li><strong>Mohammed Kasim</strong>, Chair, IEEE Kerala Section</li>
-          <li><strong>Parthasarathi Sensarma</strong>, IIT Kanpur</li>
-          <li><strong>Renji V Chacko</strong>, CDAC Trivandrum</li>
-          <li><strong>Mahesh Kumar Mishra</strong>, IIT Madras</li>
-          <li><strong>Chandan Chakraborty</strong>, IIT Kharagpur</li>
-          <li><strong>Srinivas Bhaskar Karanki</strong>, IIT Bhubaneswar</li>
-          <li><strong>Sivaji Chakravorti</strong>, Jadavpur University</li>
-          <li><strong>Ashok S.</strong>, NIT Calicut</li>
-          <li><strong>Saly George</strong>, NIT Calicut</li>
-          <li><strong>Jeevamma Jacob</strong>, NIT Calicut</li>
-          <li><strong>Ananthakrishnan P.</strong>, NIT Calicut</li>
-          <li><strong>Sameer S. M.</strong>, NIT Calicut</li>
-        </ul>
-      </div>
+    <section class="committee-grid-section">
+      <div class="container">
+        <div class="committee-grid">
+          
+          <div class="committee-box">
+            <h3>Advisory Committee</h3>
+            <ul>
+              <li><strong>Kishore Chatterjee</strong>, IIT Bombay</li>
+              <li><strong>Bhim Singh</strong>, IIT Delhi</li>
+              <li><strong>Krishna Vasudevan</strong>, IIT Madras</li>
+              <li><strong>Mohammed Kasim</strong>, Chair, IEEE Kerala Section</li>
+              <li><strong>Parthasarathi Sensarma</strong>, IIT Kanpur</li>
+              <li><strong>Renji V Chacko</strong>, CDAC Trivandrum</li>
+              <li><strong>Mahesh Kumar Mishra</strong>, IIT Madras</li>
+              <li><strong>Chandan Chakraborty</strong>, IIT Kharagpur</li>
+              <li><strong>Srinivas Bhaskar Karanki</strong>, IIT Bhubaneswar</li>
+              <li><strong>Sivaji Chakravorti</strong>, Jadavpur University</li>
+              <li><strong>Ashok S.</strong>, NIT Calicut</li>
+              <li><strong>Saly George</strong>, NIT Calicut</li>
+              <li><strong>Jeevamma Jacob</strong>, NIT Calicut</li>
+              <li><strong>Ananthakrishnan P.</strong>, NIT Calicut</li>
+              <li><strong>Sameer S. M.</strong>, NIT Calicut</li>
+            </ul>
+          </div>
 
-      <!-- Technical Advisory Committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Technical Advisory Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Mukul Chandorkar</strong>, IIT Bombay</li>
-          <li><strong>G. Narayanan</strong>, IISc Bangalore</li>
-          <li><strong>N. Kumaresan</strong>, NIT Tiruchirappalli</li>
-          <li><strong>Chandan Kumar</strong>, IIT Guwahati</li>
-        </ul>
-      </div>
+          
+          <div class="committee-box">
+            <h3>Technical Advisory Committee</h3>
+            <ul>
+              <li><strong>Mukul Chandorkar</strong>, IIT Bombay</li>
+              <li><strong>G. Narayanan</strong>, IISc Bangalore</li>
+              <li><strong>N. Kumaresan</strong>, NIT Tiruchirappalli</li>
+              <li><strong>Chandan Kumar</strong>, IIT Guwahati</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Sponsor and Fellowship Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Jagadanand G.</strong>, NIT Calicut, Convener</li>
-          <li><strong>Vivek Mohan</strong>, NIT Calicut</li>
-          <li><strong>Ashiq Muhammed P. E.</strong>, NIT Calicut</li>
-          <li><strong>Sandeep J.</strong>, NIT Calicut</li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Sponsor and Fellowship Committee</h3>
+            <ul>
+              <li><strong>Jagadanand G.</strong>, NIT Calicut, Convener</li>
+              <li><strong>Vivek Mohan</strong>, NIT Calicut</li>
+              <li><strong>Ashiq Muhammed P. E.</strong>, NIT Calicut</li>
+              <li><strong>Sandeep J.</strong>, NIT Calicut</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Hospitality Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Sunil Kumar T. K.</strong>, NIT Calicut, Convener</li>
-          <li><strong>Nikhil Sasidharan</strong>, NIT Calicut</li>
-          <li><strong>Mithun M. S.</strong>, NIT Calicut</li>
-          <li><strong>Arun Neelimegham K. M.</strong>, NIT Calicut</li>
-          <li><strong>Sivaprasad A.</strong>, MIT, Kochi</li>
-          <li>
-            <strong>Bijuna Kunju</strong>, Vice-Chair, IEEE Kerala Section
-          </li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Hospitality Committee</h3>
+            <ul>
+              <li><strong>Sunil Kumar T. K.</strong>, NIT Calicut, Convener</li>
+              <li><strong>Nikhil Sasidharan</strong>, NIT Calicut</li>
+              <li><strong>Mithun M. S.</strong>, NIT Calicut</li>
+              <li><strong>Arun Neelimegham K. M.</strong>, NIT Calicut</li>
+              <li><strong>Sivaprasad A.</strong>, MIT, Kochi</li>
+              <li><strong>Bijuna Kunju</strong>, Vice-Chair, IEEE Kerala Section</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Registration Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Preetha P.</strong>, NIT Calicut, Convener</li>
-          <li><strong>Mukti Barai</strong>, NIT Calicut</li>
-          <li><strong>Hema Rani P.</strong>, NIT Calicut</li>
-          <li><strong>Gopakumar Pathirikkat</strong>, NIT Calicut</li>
-          <li><strong>Sanjay M.</strong>, NIT Calicut</li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Registration Committee</h3>
+            <ul>
+              <li><strong>Preetha P.</strong>, NIT Calicut, Convener</li>
+              <li><strong>Mukti Barai</strong>, NIT Calicut</li>
+              <li><strong>Hema Rani P.</strong>, NIT Calicut</li>
+              <li><strong>Gopakumar Pathirikkat</strong>, NIT Calicut</li>
+              <li><strong>Sanjay M.</strong>, NIT Calicut</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Tutorial Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Jeevamma Jacob</strong>, NIT Calicut, Convener</li>
-          <li><strong>Deepak M.</strong>, NIT Calicut</li>
-          <li><strong>Soumya Ranjan Meher</strong>, NIT Calicut</li>
-          <li><strong>Rajeev Kumar Singh</strong>, IIT (BHU), Varanasi</li>
-          <li><strong>Sija Gopinathan</strong>, MACE, Kothamangalam</li>
-          <li><strong>Sateesh Kumar Kuncham</strong>, NIT Trichy</li>
-          <li>
-            <strong>Vasanthi V.</strong>, Chair, Joint Chapter, IAS/IES/PELS,
-            IEEE Kerala Section
-          </li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Tutorial Committee</h3>
+            <ul>
+              <li><strong>Jeevamma Jacob</strong>, NIT Calicut, Convener</li>
+              <li><strong>Deepak M.</strong>, NIT Calicut</li>
+              <li><strong>Soumya Ranjan Meher</strong>, NIT Calicut</li>
+              <li><strong>Rajeev Kumar Singh</strong>, IIT (BHU), Varanasi</li>
+              <li><strong>Sija Gopinathan</strong>, MACE, Kothamangalam</li>
+              <li><strong>Sateesh Kumar Kuncham</strong>, NIT Trichy</li>
+              <li><strong>Vasanthi V.</strong>, Chair, Joint Chapter, IAS/IES/PELS, IEEE Kerala Section</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Publication Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Sunitha K.</strong>, NIT Calicut, Convener</li>
-          <li><strong>Shreelakshmi M. P.</strong>, NIT Calicut</li>
-          <li><strong>Sathiya S.</strong>, NIT Calicut</li>
-          <li><strong>Rahul Radhakrishnan</strong>, NIT Calicut</li>
-          <li><strong>Prajof P.</strong>, NIT Surathkal</li>
-          <li><strong>Jaison Mathew</strong>, IEEE Kerala Section</li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Publication Committee</h3>
+            <ul>
+              <li><strong>Sunitha K.</strong>, NIT Calicut, Convener</li>
+              <li><strong>Shreelakshmi M. P.</strong>, NIT Calicut</li>
+              <li><strong>Sathiya S.</strong>, NIT Calicut</li>
+              <li><strong>Rahul Radhakrishnan</strong>, NIT Calicut</li>
+              <li><strong>Prajof P.</strong>, NIT Surathkal</li>
+              <li><strong>Jaison Mathew</strong>, IEEE Kerala Section</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Finance Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Nasirul Haque</strong>, NIT Calicut, Convener</li>
-          <li><strong>Kumaravel S.</strong>, NIT Calicut</li>
-          <li><strong>Gejo C. V.</strong>, Joint Registrar, NIT Calicut</li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Finance Committee</h3>
+            <ul>
+              <li><strong>Nasirul Haque</strong>, NIT Calicut, Convener</li>
+              <li><strong>Kumaravel S.</strong>, NIT Calicut</li>
+              <li><strong>Gejo C. V.</strong>, Joint Registrar, NIT Calicut</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Publicity Committee</h3>
-        <ul class="committee-list">
-          <li><strong>S. N. Deepa</strong>, NIT Calicut, Convener</li>
-          <li><strong>V. Karthikeyan</strong>, NIT Calicut</li>
-          <li><strong>Devesh Shukla</strong>, NIT Calicut</li>
-          <li><strong>Sukriti Tiwari</strong>, NIT Calicut</li>
-          <li><strong>Parthiban Perumal</strong>, NITK</li>
-          <li><strong>Kalpana R.</strong>, NITK</li>
-          <li><strong>Biju K.</strong>, Vice-Chair, IEEE Kerala Section</li>
-          <li><strong>Rahul S.</strong>, Amrita University</li>
-        </ul>
-      </div>
+          <div class="committee-box">
+            <h3>Publicity Committee</h3>
+            <ul>
+              <li><strong>S. N. Deepa</strong>, NIT Calicut, Convener</li>
+              <li><strong>V. Karthikeyan</strong>, NIT Calicut</li>
+              <li><strong>Devesh Shukla</strong>, NIT Calicut</li>
+              <li><strong>Sukriti Tiwari</strong>, NIT Calicut</li>
+              <li><strong>Parthiban Perumal</strong>, NITK</li>
+              <li><strong>Kalpana R.</strong>, NITK</li>
+              <li><strong>Biju K.</strong>, Vice-Chair, IEEE Kerala Section</li>
+              <li><strong>Rahul S.</strong>, Amrita University</li>
+            </ul>
+          </div>
 
-      <!-- Column 3: Placeholder for another committee -->
-      <div class="committee-column">
-        <h3 class="committee-title">Technical Program Committee</h3>
-        <ul class="committee-list">
-          <li><strong>Rijil Ramchand</strong>, NIT Calicut, Convener</li>
-          <li><strong>Sunitha R.</strong>, NIT Calicut</li>
-          <li><strong>Subha D. P.</strong>, NIT Calicut</li>
-          <li><strong>Mija S. J.</strong>, NIT Calicut</li>
-          <li><strong>Subhash K. M.</strong>, NIT Calicut</li>
-          <li><strong>Shihabudheen K. V.</strong>, NIT Calicut</li>
-          <li><strong>S. Kanagalakshmi</strong>, NIT Calicut</li>
-          <li><strong>Harish Sudhakaran Nair</strong>, NIT Calicut</li>
-          <li><strong>Rakesh R. Warier</strong>, NIT Calicut</li>
-          <li><strong>Angshudeep Majumdar</strong>, NIT Calicut</li>
-          <li><strong>Ranjith Ravindranathan Nair</strong>, NIT Calicut</li>
-          <li><strong>Nimal Madhu M</strong>, NIT Calicut</li>
-          <li><strong>M. Raghuram</strong>, NIT Calicut</li>
-          <li><strong>Greeshma Mohan U</strong>, NIT Calicut</li>
-          <li><strong>Siva Kumar K.</strong>, IIT Hyderabad</li>
-          <li>
-            <strong>Prasanna U. R.</strong>, Live4est Technologies Pvt. Ltd.,
-            Bangalore
-          </li>
-          <li><strong>Amod Umarikar</strong>, IIT Indore</li>
-          <li><strong>Tanmoy Bhattacharya</strong>, IIT Kharagpur</li>
-          <li><strong>Kamalesh Hatua</strong>, IIT Madras</li>
-          <li><strong>Anandrup Das</strong>, IIT Delhi</li>
-          <li><strong>Rajeevan P. P.</strong>, IIST Trivandrum</li>
-          <li><strong>Anubrata Dey</strong>, IIT Roorkee</li>
-          <li><strong>Sudharashan Kaarthik R</strong>, IIST Trivandrum</li>
-          <li>
-            <strong>Deepak Gunasekharan</strong>, Harbinger Motors, LA, USA
-          </li>
-          <li><strong>Sheron Figarado</strong>, IIT Goa</li>
-          <li><strong>Arun Rahul S</strong>, IIT Palakkad</li>
-          <li><strong>Sumit Pramanick</strong>, IIT Delhi</li>
-          <li><strong>Apurv Kumar Yadav</strong>, IIT Roorkee</li>
-          <li><strong>S. Ravi Prakash Reddy</strong>, IIT Bombay</li>
-          <li><strong>Gopal Mondal</strong>, Siemens AG, Erlangen, Germany</li>
-          <li><strong>B. Arun Karuppaswamy</strong>, IIT Madras</li>
-          <li>
-            <strong>Ravishankar A. N.</strong>, Christ College of Engineering,
-            Kerala
-          </li>
-          <li><strong>Rohit K. Mathew</strong>, NIE Mysore</li>
-          <li><strong>Vinu Thomas</strong>, Nantes University France</li>
-          <li>
-            <strong>Sonam Acharya</strong>, Indian Institute of Technology
-            (ISM), Dhanbad
-          </li>
-          <li><strong>G. Saravana Ilango</strong>, NIT Tiruchirappalli</li>
-          <li><strong>S. Senthil Kumar</strong>, NIT Tiruchirappalli</li>
-          <li><strong>V. Vignesh Kumar</strong>, NIT Tiruchirappalli</li>
-          <li><strong>Rajesh Gupta</strong>, NIT Allahabad</li>
-          <li><strong>Dipankar Debnath</strong>, IIT Kharagpur</li>
-          <li><strong>Shrikrishna V. Kulkarni</strong>, IIT Bombay</li>
-          <li><strong>Saptarshi Basak</strong>, IIT Delhi</li>
-          <li><strong>Sumit Kumar Chattopadhyay</strong>, IIT Delhi</li>
-          <li><strong>Jose Thankachan</strong>, NIT Trichy</li>
-          <li><strong>Avneet Kumar</strong>, IIT Patna</li>
-          <li><strong>Santosh Kumar Singh</strong>, BHU Varanasi</li>
-        </ul>
+        
+          <div class="committee-box">
+            <h3>Technical Program Committee</h3>
+            <ul>
+              <li><strong>Rijil Ramchand</strong>, NIT Calicut, Convener</li>
+              <li><strong>Sunitha R.</strong>, NIT Calicut</li>
+              <li><strong>Subha D. P.</strong>, NIT Calicut</li>
+              <li><strong>Mija S. J.</strong>, NIT Calicut</li>
+              <li><strong>Subhash K. M.</strong>, NIT Calicut</li>
+              <li><strong>Shihabudheen K. V.</strong>, NIT Calicut</li>
+              <li><strong>S. Kanagalakshmi</strong>, NIT Calicut</li>
+              <li><strong>Harish Sudhakaran Nair</strong>, NIT Calicut</li>
+              <li><strong>Rakesh R. Warier</strong>, NIT Calicut</li>
+              <li><strong>Angshudeep Majumdar</strong>, NIT Calicut</li>
+              <li><strong>Ranjith Ravindranathan Nair</strong>, NIT Calicut</li>
+              <li><strong>Nimal Madhu M</strong>, NIT Calicut</li>
+              <li><strong>M. Raghuram</strong>, NIT Calicut</li>
+              <li><strong>Greeshma Mohan U</strong>, NIT Calicut</li>
+              <li><strong>Siva Kumar K.</strong>, IIT Hyderabad</li>
+              <li><strong>Prasanna U. R.</strong>, Live4est Technologies Pvt. Ltd., Bangalore</li>
+              <li><strong>Amod Umarikar</strong>, IIT Indore</li>
+              <li><strong>Tanmoy Bhattacharya</strong>, IIT Kharagpur</li>
+              <li><strong>Kamalesh Hatua</strong>, IIT Madras</li>
+              <li><strong>Anandrup Das</strong>, IIT Delhi</li>
+              <li><strong>Rajeevan P. P.</strong>, IIST Trivandrum</li>
+              <li><strong>Anubrata Dey</strong>, IIT Roorkee</li>
+              <li><strong>Sudharashan Kaarthik R</strong>, IIST Trivandrum</li>
+              <li><strong>Deepak Gunasekharan</strong>, Harbinger Motors, LA, USA</li>
+              <li><strong>Sheron Figarado</strong>, IIT Goa</li>
+              <li><strong>Arun Rahul S</strong>, IIT Palakkad</li>
+              <li><strong>Sumit Pramanick</strong>, IIT Delhi</li>
+              <li><strong>Apurv Kumar Yadav</strong>, IIT Roorkee</li>
+              <li><strong>S. Ravi Prakash Reddy</strong>, IIT Bombay</li>
+              <li><strong>Gopal Mondal</strong>, Siemens AG, Erlangen, Germany</li>
+              <li><strong>B. Arun Karuppaswamy</strong>, IIT Madras</li>
+              <li><strong>Ravishankar A. N.</strong>, Christ College of Engineering, Kerala</li>
+              <li><strong>Rohit K. Mathew</strong>, NIE Mysore</li>
+              <li><strong>Vinu Thomas</strong>, Nantes University France</li>
+              <li><strong>Sonam Acharya</strong>, Indian Institute of Technology (ISM), Dhanbad</li>
+              <li><strong>G. Saravana Ilango</strong>, NIT Tiruchirappalli</li>
+              <li><strong>S. Senthil Kumar</strong>, NIT Tiruchirappalli</li>
+              <li><strong>V. Vignesh Kumar</strong>, NIT Tiruchirappalli</li>
+              <li><strong>Rajesh Gupta</strong>, NIT Allahabad</li>
+              <li><strong>Dipankar Debnath</strong>, IIT Kharagpur</li>
+              <li><strong>Shrikrishna V. Kulkarni</strong>, IIT Bombay</li>
+              <li><strong>Saptarshi Basak</strong>, IIT Delhi</li>
+              <li><strong>Sumit Kumar Chattopadhyay</strong>, IIT Delhi</li>
+              <li><strong>Jose Thankachan</strong>, NIT Trichy</li>
+              <li><strong>Avneet Kumar</strong>, IIT Patna</li>
+              <li><strong>Santosh Kumar Singh</strong>, BHU Varanasi</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- Sticky Footer -->
-    <footer class="footer">
+
+    <section class="contact-footer">
+      <div class="container">
+        <h2>Contact Us</h2>
+      </div>
+    </section>
+
+<footer class="footer-bottom">
       <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
     </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
+</body>
 </html>
