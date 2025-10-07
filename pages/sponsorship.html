@@ -1,248 +1,453 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NPEC 2025 - Sponsorship</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/global.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>NPEC 2025 - Sponsorship</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Inter:wght@400;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet" />
+
+      <style>
+        :root {
+        --npec-red: #830202;
+        --npec-dark-blue: #1a2332;
+        }
+
+        body {
+          font-family: "Inter", sans-serif;
+          background-color: #f8f9fa;
+          overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Space Grotesk", sans-serif;
+        }
+
+        .left-decorator-top {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+        }
+
+        .navbar {
+          background: var(--npec-red);
+          padding: 0.5rem 1rem;
+          position: absolute;
+          right: 1px;
+          width: auto;
+          z-index: 10;
+          border-radius: 0 0 50px 50px;
+          backdrop-filter: blur(8px);
+          box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+          
+        }
+
+        .navbar-nav {
+          padding: 0.5rem 1rem;
+        }
+
+        .navbar-brand {
+          display: none;
+        }
+
+        .nav-link {
+          color: white !important;
+          font-size: 0.85rem;
+          font-weight: 800;
+          padding: 0.5rem 0.8rem !important;
+          text-transform: uppercase;
+          font-family: inherit;
+
+        }
+
+        .navbar-toggler {
+          border: none;
+          padding: 0.25rem 0.5rem;
+        }
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+          .dropdown-menu {
+          background-color: var(--npec-red);
+          border-radius: 10px;
+          border: none;
+          margin-top: 10px;
+        }
+
+        .dropdown-item {
+          color: white;
+          font-size: 0.85rem;
+          font-weight: 500;
+          padding: 0.5rem 1rem;
+          text-transform: uppercase;
+        }
+
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+          background-color: #a31818;
+          color: white;
+        }
+        
+        
+        /* Hero Section */
+        .page-hero {
+          padding: 140px 0 80px 0;
+          text-align: center;
+        }
+        .page-hero h1 {
+          font-size: 3.5rem;
+          font-weight: 700;
+          color: var(--npec-red);
+        }
+        .btn-brochure {
+          background-color: var(--npec-red);
+          color: white;
+          font-weight: 600;
+          text-transform: uppercase;
+          padding: 12px 30px;
+          border-radius: 50px;
+          transition: all 0.3s ease;
+        }
+        .btn-brochure:hover {
+          background-color: #6d0113; /* A darker red for hover */
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+          padding: 60px 0;
+          display: flex;
+          flex-direction: column;
+          gap: 30px; /* Reduced gap for a tighter look */
+          align-items: center;
+        }
+        .benefit-card {
+          position: relative;
+          width: 100%;
+          max-width: 960px;
+          min-height: 140px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          padding: 20px 70px;
+          color: #FFFFFF;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .benefit-card-1 { background: #2E6418; }
+        .benefit-card-2 { background: #004AAD; }
+        .benefit-card-3 { background: #CB4E01; }
+        .benefit-card-4 { background: #4A10BC; }
+
+        .benefit-number {
+          font-weight: 600;
+          font-size: 35px;
+          margin-right: 40px;
+        }
+        .benefit-text {
+          font-weight: 600;
+          font-size: 1.5rem;
+          line-height: 1.3;
+          padding-right: 180px;
+        }
+        .benefit-icon-container {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 161px;
+          height: 100%;
+          background: #FFFFFF;
+          border-radius: 0 50px 50px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .benefit-icon-container svg {
+          width: 80px;
+          height: 80px;
+        }
+        
+        /* Categories Section */
+        .categories-header {
+          width: 100%;
+          max-width: 655px;
+          height: 114px;
+          background: #CB2826;
+          border-radius: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 80px auto;
+        }
+        .categories-title {
+          font-weight: 600;
+          font-size: 40px;
+          color: #FFFFFF;
+        }
+
+        .center-image {
+          width: 100%;
+          max-width: 587px;
+          height: auto;
+          border-radius: 20px;
+          margin: 40px 0;
+        }
+
+        .category-card {
+          position: relative;
+          width: 100%;
+          min-height: 420px;
+          border-radius: 50px;
+          padding: 100px 40px 40px;
+          font-weight: 600;
+          font-size: 1.1rem; /* Slightly reduced font size for more text */
+          line-height: 1.6;
+          color: #000000;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+          display: flex; 
+          flex-direction: column;
+        }
+        .sponsorship-cols {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+        }
+        .sponsorship-cols .category-card {
+          flex-grow: 1; /* Makes cards in the same column equal height */
+        }
+        .category-header {
+          position: absolute;
+          top: -36px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 349px;
+          height: 73px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 40px;
+          font-weight: 600;
+          font-size: 40px;
+          color: #FFFFFF;
+        }
+        .card-diamond { background: #FFE7C1; }
+        .header-diamond { background: #FF914C; }
+        .card-silver { background: #FFC3E9; }
+        .header-silver { background: #CC007E; }
+        .card-platinum { background: #E2CBF7; }
+        .header-platinum { background: #8F1EAC; }
+        .card-gold { background: #FBF0C0; }
+        .header-gold { background: #CDA300; }
+        .card-bronze { background: #D9F3CC; }
+        .header-bronze { background: #2D6419; }
+
+
+        
+        .footer-bottom {
+          background: var(--npec-dark-blue);
+          color: white;
+          padding: 1rem 0;
+          text-align: center;
+          font-size: 0.9rem;
+        }
+  
+        
+        @media (max-width: 992px) {
+          .left-decorator-top, .navbar-brand {
+            display: none;
+          }
+          .navbar {
+            position: relative;
+            width: 100%;
+            border-radius: 0;
+          }
+
+          .page-hero { padding: 80px 0 40px 0; }
+          .page-hero h1 { font-size: 2rem; }
+          .page-hero .lead { font-size: 1rem; }
+
+   
+          .benefit-card {
+              min-height: auto;
+              padding: 10px 15px;
+              border-radius: 30px;
+          }
+          .benefit-number {
+              font-size: 24px;
+              margin-right: 15px;
+          }
+          .benefit-text {
+              font-size: 0.8rem; 
+              padding-right: 75px; 
+          }
+          .benefit-icon-container {
+              width: 70px;
+              border-radius: 0 30px 30px 0;
+          }
+          .benefit-icon-container svg {
+              width: 35px;
+              height: 35px;
+          }
+
+          .categories-header {
+              height: 80px;
+              border-radius: 40px;
+              margin: 60px auto;
+          }
+          .categories-title {
+              font-size: 1.8rem;
+              text-align: center;
+          }
+
+          .center-image { margin: 0; }
+          
+          .sponsorship-row {
+              --bs-gutter-x: 0.8rem; 
+          }
+
+        
+          .category-card {
+              min-height: auto; 
+              padding: 55px 15px 15px;
+              border-radius: 30px;
+              font-size: 0.7rem; 
+              line-height: 1.4;
+          }
+          .category-header {
+              width: 90%;
+              height: 40px;
+              top: -20px;
+              font-size: 1.2rem; 
+              border-radius: 20px;
+          }
+          .sponsorship-cols {
+              gap: 1rem;
+          }
+        }
+      </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bolder cursor-pointer" href="/">NPEC 2025</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/committee.html"
-                    >Committee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/tracks.html"
-                    >Tracks</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/contact.html"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                For Authors
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-papers.html"
-                    >Call for Papers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-special-sessions.html"
-                    >Call for Special Session</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-tutorials.html"
-                  >
-                    Call for Tutorials</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/final-paper-submission.html"
-                    >Final Paper Submission</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/presentation-guideline.html"
-                    >Presentation Guidelines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-student-poster-presentation.html"
-                    >Call for Student Poster Presentation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/technical-programme.html"
-                    >Technical Programme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/speakers.html"
-                    >Speakers</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/awards.html"
-                >Awards
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/venue.html"
-                >Venue</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link cursor-pointer"
-                href="/pages/accommodation.html"
-                >Accommodation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/sponsorship.html"
-                >Sponsorship</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/registration.html"
-                >Registration</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-
-
-<div class="container my-5">
- 
-  <section class="mb-4">
-    <div class="bg-light p-4 rounded shadow-sm text-center">
-      <h2 class="mb-3 text-primary fw-bold">
-        <a href="/pages/sponsorship/callforsponsors.html" target="_blank" class="text-decoration-underline text-primary">
-          Call for Sponsorship Link
-        </a>
-      </h2>
-    </div>
-  </section>
-
- 
-  <section>
-    <div class="bg-white p-4 rounded shadow-sm">
-      <h2 class="mb-4 text-primary fw-bold text-center">Sponsors for NPEC 2025</h2>
       
-   
-      <h4 class="mt-4 mb-4 text-danger fw-bold"></h4> <!-- Add Tier Title Here for Sponsors-->
+      <svg class="left-decorator-top" width="75" height="300" viewBox="0 0 165 819" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_dd_75_7)">
+          <path d="M0 0H115.506V662.68C115.506 726.472 63.7921 778.186 0 778.186V0Z" fill="#870117" />
+          <g transform="translate(35, 80)">
+            <path d="M16.7357 613.781C9.01866 611.639 3.30064 604.607 3.30064 596.177L3.30061 21.0509C3.30061 12.6213 8.97215 5.54224 16.7356 3.44647L16.7356 0.000121339C7.15912 2.18903 -2.65076e-05 10.8049 -2.60597e-05 21.0509L-9.20162e-07 596.177C-4.72295e-07 606.423 7.15915 615.039 16.7357 617.228L16.7357 613.781Z" fill="white" />
+            <path d="M27.1015 3.63361C34.4466 6.00885 39.7927 12.9015 39.7927 21.0518L39.7928 596.178C39.7928 604.328 34.4466 611.267 27.1016 613.596L27.1016 617.042C36.3062 614.574 43.1399 606.191 43.1399 596.178L43.1399 21.0518C43.1399 11.0386 36.3061 2.65558 27.1015 0.187195L27.1015 3.63361Z" fill="white" />
+            <path d="M36.4933 278.971L36.4933 259.038L6.60156 288.984L6.60156 308.87L36.4933 278.971Z" fill="white" /><path d="M36.4933 304.912L36.4933 283.628L6.60156 313.575L6.60156 334.812L36.4933 304.912Z" fill="white" /><path d="M36.4933 333.926L36.4933 309.569L6.60156 339.515L6.60156 363.872L36.4933 333.926Z" fill="white" /><path d="M36.4933 369.088L36.4933 338.583L6.60156 368.529L6.60156 399.034L36.4933 369.088Z" fill="white" /><path d="M36.4937 410.072L36.4937 373.792C26.5453 383.759 16.5968 393.725 6.64844 403.692L6.64844 439.972L36.4937 410.072Z" fill="white" /><path d="M36.4937 462.326L36.4937 414.729L6.64844 444.629L6.64844 492.226C16.5504 482.259 26.4988 472.293 36.4937 462.326Z" fill="white" /><path d="M36.4933 525.805L36.4933 466.984L6.60156 496.883L6.60156 555.751L36.4933 525.805Z" fill="white" /><path d="M6.60156 560.409L6.60156 596.176C6.60156 604.42 13.2958 611.126 21.5242 611.126C29.7525 611.126 36.4468 604.42 36.4468 596.176L36.4468 530.509L6.60156 560.409Z" fill="white" /><path d="M36.4933 254.381L36.4933 235.845L6.60156 265.745L6.60156 284.281L36.4933 254.381Z" fill="white" /><path d="M36.4933 231.141L36.4933 214.282L6.60156 244.228L6.60156 261.087L36.4933 231.141Z" fill="white" />
+          </g>
+        </g>
+        <defs>
+          <filter id="filter0_dd_75_7" x="-31" y="-40" width="195.506" height="858.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dx="9" /><feGaussianBlur stdDeviation="20" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_7" /><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" /><feOffset dy="4" /><feGaussianBlur stdDeviation="2" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_75_7" result="effect2_dropShadow_75_7" /><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_75_7" result="shape" />
+          </filter>
+        </defs>
+      </svg>
 
-        <div class="row align-items-center mb-4"> <!--Copy this Div and The H4 to create a New Tier-->
-          
-              <div class="col-md-3 col-6 text-center">
-            <img src="/assets/Altair_Brandmark.jpg" alt="ALTAIRLogo" class="img-fluid mb-2" style="max-height: 100px;">
-            <div>
-              <a href="https://altair.com/" target="_blank" class="fw-bold text-danger ">ALTAIR</a>
-            </div>
+      <header>
+          <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                      <ul class="navbar-nav ms-auto">
+                          <li class="nav-item"><a class="nav-link" href="#">NPEC 2025</a></li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-bs-toggle="dropdown">Home</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Committee</a></li>
+                                  <li><a class="dropdown-item" href="#">Tracks</a></li>
+                                  <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button" data-bs-toggle="dropdown">For Authors</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Call for Papers</a></li>
+                                  <li><a class="dropdown-item" href="#">Call for Special Session</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgram" role="button" data-bs-toggle="dropdown">Program</a>
+                              <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Technical Programme</a></li>
+                              </ul>
+                          </li>
+                          <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Venue</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Sponsorship</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Registration</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+      </header>
 
-            </div>
-          
-            <!-- 
-            next sponsor of same Tier
-            <div class="col-md-3 col-6 text-center">
-            <img src="../assets/Altair_Brandmark.jpg" alt="TIH IITG TIDF" class="img-fluid mb-2" style="max-height: 100px;">
-            <div>
-              <a href="https://altair.com/" target="_blank" class="fw-bold text-danger ">ALTAIR</a>
-            </div>
+      <main>
+          <section class="page-hero">
+              <div class="container">
+                  <h1>Sponsorship Opportunities</h1>
+                  <p class="lead my-4 px-2">Sponsorship: For becoming a partner in conference, please view the Brochure and Scan the QR code for the Sponsorship Form</p>
+                  <a href="../assets/NPECSponsorshipBrochure.pdf" target="_blank" class="btn btn-lg btn-brochure">View Brochure</a>
+              </div>
+          </section>
 
-            </div>
+          <section class="benefits-section container">
+              <div class="benefit-card benefit-card-1"><div class="benefit-number">01</div><p class="benefit-text">An ideal opportunity to highlight services and products before a large gathering of delegates.</p><div class="benefit-icon-container"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4L12 2M12 22V20M20 12L22 12M2 12H4M19.071 4.929L20.485 3.515M3.515 20.485L4.929 19.071M19.071 19.071L20.485 20.485M3.515 3.515L4.929 4.929M15 9C15 7.343 13.657 6 12 6C10.343 6 9 7.343 9 9C9 10.657 10.343 12 12 12C13.657 12 15 10.657 15 9ZM7 20L10 14H14L17 20H7Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+              <div class="benefit-card benefit-card-2"><div class="benefit-number">02</div><p class="benefit-text">An opportunity to showcase and enhance brand visibility at a premier conference.</p><div class="benefit-icon-container"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="#000"/></svg></div></div>
+              <div class="benefit-card benefit-card-3"><div class="benefit-number">03</div><p class="benefit-text">A chance to stay updated with the latest developments in power electronics.</p><div class="benefit-icon-container"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18.566C9 19.914 10.304 21.083 11.889 21.083C13.474 21.083 14.778 19.914 14.778 18.566C14.778 17.218 13.474 16.049 11.889 16.049C10.304 16.049 9 17.218 9 18.566ZM12 2V5M4.22 4.22L6.34 6.34M2 12H5M19 12H22M17.66 6.34L19.78 4.22M7 13.222C7 10.608 8.948 8.5 11.4 8.5C13.852 8.5 15.8 10.608 15.8 13.222C15.8 14.869 14.93 16.315 13.6 17.222H9.2C7.87 16.315 7 14.869 7 13.222Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+              <div class="benefit-card benefit-card-4"><div class="benefit-number">04</div><p class="benefit-text">A platform to network with individuals sharing similar interests and goals.</p><div class="benefit-icon-container"><svg viewBox="0 0 24 24" fill="none"><path d="M17 17C17 14.239 14.761 12 12 12C9.239 12 7 14.239 7 17M12 12C12 9.239 9.761 7 7 7C4.239 7 2 9.239 2 12C2 14.761 4.239 17 7 17M12 12C12 9.239 14.239 7 17 7C19.761 7 22 9.239 22 12C22 14.761 19.761 17 17 17M12 7C12 4.239 14.239 2 17 2C19.761 2 22 4.239 22 7C22 9.761 19.761 12 17 12M12 7C12 4.239 9.761 2 7 2C4.239 2 2 4.239 2 7C2 9.761 4.239 12 7 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+          </section>
 
-            
-          </div> 
-          -->
+          <section class="container">
+              <div class="categories-header">
+                  <h2 class="categories-title">Sponsorship Categories</h2>
+              </div>
+              <div class="row align-items-center sponsorship-row">
+                  <div class="col-4 sponsorship-cols">
+                      <div class="category-card card-diamond">
+                          <div class="category-header header-diamond">DIAMOND</div>
+                          <p><strong>Rs. 4,00,000</strong><br>Exhibition Stall ( 5m x 2m ) + 5 free delegates<br>1 page advertisement & company logo in the book of abstracts + Advertisement in digital display<br>Tutorial Session Opportunity<br>Branding in all conference websites and materials</p>
+                      </div>
+                      <div class="category-card card-silver">
+                          <div class="category-header header-silver">SILVER</div>
+                          <p><strong>Rs. 2,00,000</strong><br>Exhibition Stall ( 3m x 2m ) + 2 Free delegates<br>1/2 Page advertisement & company logo in the book of abstracts + Advertisement in Digital Display<br>Branding in all conference websites and materials</p>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <img class="center-image" src="../assets/sponsorarrows.png" alt="Sponsorship levels diagram">
+                  </div>
+                  <div class="col-4 sponsorship-cols">
+                      <div class="category-card card-platinum">
+                          <div class="category-header header-platinum">PLATINUM</div>
+                          <p><strong>Rs. 6,00,000</strong><br>Exhibition Stall( 5m x 3m ) + 8 free delegates<br>1 page advertisement & company logo in the book of abstracts + Advertisement in Digital Display<br>Keynote Lecture Opportunity<br>Branding in all conference websites and materials</p>
+                      </div>
+                      <div class="category-card card-gold">
+                          <div class="category-header header-gold">GOLD</div>
+                          <p><strong>Rs. 3,00,000</strong><br>Exhibition Stall ( 4m x 2m ) + 3 Free delegates<br>1/2 Page advertisement & company logo in the book of abstracts + Advertisement in Digital Display<br>Tutorial Session Opportunity<br>Branding in all conference websites and materials</p>
+                      </div>
+                      <div class="category-card card-bronze">
+                          <div class="category-header header-bronze">BRONZE</div>
+                          <p><strong>Rs. 1,00,000</strong><br>Exhibition Stall ( 2m x 2m ) + 2 Free delegates<br>Advertisement in Digital Display<br>Branding in all conference websites and materials</p>
+                      </div>
+                  </div>
+              </div>
+          </section>
+         
+      </main>
 
-      </div> 
-
-    </div>
-
-
-  </section>
-</div>
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+       <footer class="footer-bottom">
+          <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
+      </footer>   
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
+  </html>

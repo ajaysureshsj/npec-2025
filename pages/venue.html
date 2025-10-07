@@ -1,341 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NPEC 2025 - Venue</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <title>NPEC 2025 - Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/global.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bolder cursor-pointer" href="/">NPEC 2025</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/committee.html"
-                    >Committee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/tracks.html"
-                    >Tracks</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/contact.html"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                For Authors
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-papers.html"
-                    >Call for Papers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-special-sessions.html"
-                    >Call for Special Session</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-tutorials.html"
-                  >
-                    Call for Tutorials</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/final-paper-submission.html"
-                    >Final Paper Submission</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/presentation-guideline.html"
-                    >Presentation Guidelines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-student-poster-presentation.html"
-                    >Call for Student Poster Presentation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/technical-programme.html"
-                    >Technical Programme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/speakers.html"
-                    >Speakers</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/awards.html"
-                >Awards
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/venue.html"
-                >Venue</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link cursor-pointer"
-                href="/pages/accommodation.html"
-                >Accommodation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/sponsorship.html"
-                >Sponsorship</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/registration.html"
-                >Registration</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <style>
+      :root {
+        --npec-red: #830202;
+        --npec-dark-blue: #1a2332;
+        --table-header-bg: #1a2332;
+        --table-border-color: #4a5568; 
+      }
 
-    <div class="container mt-5">
-      <h2 class="text-center">Venue</h2>
+      body {
+        font-family: "Inter", sans-serif;
+        background: white;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
 
-      <!-- Hero Section with Embedded Video -->
-      <div class="text-center mt-4">
-        <iframe
-          width="100%"
-          height="400"
-          src="https://www.youtube.com/embed/tBv_YVvFD88"
-          title="NIT Calicut Campus Tour"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="text-center mt-4">
-        <a
-          href="https://maps.app.goo.gl/QLXhAeXu4BCZWkmN6"
-          target="_blank"
-          class="btn btn-success btn-md rounded-1"
-        >
-          <i class="fas fa-map-marker-alt"></i> View on Google Maps
-        </a>
-      </div>
-      <h4 class="mt-5 fw-bold text-center">How to Reach</h4>
-      <div class="row mt-3">
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <i class="fas fa-plane fa-3x"></i>
-              <h5 class="card-title mt-2">By Air</h5>
-              <p class="card-text">
-                The nearest airport is
-                <strong>Calicut International Airport (CCJ)</strong>, about 40
-                km from NIT Calicut.
-              </p>
+      .left-decorator-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      @media (max-width: 992px) {
+        .left-decorator-top {
+          display: none;
+        }
+      }
+
+      .navbar {
+        background: var(--npec-red);
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 1px;
+        width: auto;
+        z-index: 10;
+        border-radius: 0 0 50px 50px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 6px 15px var(--npec-dark-blue);
+      }
+
+      .navbar-nav {
+        padding: 0.5rem 1rem;
+      }
+
+      .navbar-brand {
+        display: none;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem !important;
+        text-transform: uppercase;
+      }
+
+      .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      .dropdown-menu {
+        background-color: var(--npec-red);
+        border-radius: 10px;
+        border: none;
+        margin-top: 10px;
+      }
+
+      .dropdown-item {
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+      }
+
+      .dropdown-item:hover,
+      .dropdown-item:focus {
+        background-color: #a31818;
+        color: white;
+      }
+      
+      .page-hero {
+        background: white;
+        padding-top: 120px;
+        text-align: center;
+      }
+
+      .page-hero h1 {
+        font-size: 3rem;
+        color: var(--npec-red);
+        margin-bottom: 40px;
+        font-weight: bold;
+      }
+
+      .content-section {
+        padding: 40px 20px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      .registration-heading {
+        font-size: 2.5rem;
+        color: var(--npec-dark-blue);
+        margin-bottom: 50px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .registration-table {
+        margin-bottom: 50px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .registration-table th, 
+      .registration-table td {
+        border: 1px solid var(--table-border-color);
+        padding: 12px 15px;
+        text-align: left;
+        color: white;
+      }
+      .registration-table thead th {
+        background-color: var(--table-header-bg);
+        color: white;
+        font-weight: 600;
+      }
+      .registration-table tbody tr td:first-child {
+        background-color: var(--table-header-bg);
+        color: white;
+        font-weight: 500;
+      }
+      .registration-table tbody tr td:not(:first-child) {
+        background-color: white;
+        color: var(--npec-dark-blue);
+      }
+
+      /* UPDATED STYLES FOR IMPORTANT NOTES */
+      .important-notes-title {
+        font-size: 2.5rem;
+        color: var(--npec-red); /* Title color changed to red */
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .important-notes-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .important-notes-list li {
+        background-color: white; /* Background changed to white */
+        color: var(--npec-dark-blue); /* Text color changed to dark */
+        padding: 15px 20px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd; /* Border changed to light grey */
+        border-radius: 4px;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .important-notes-list li a {
+          color: var(--npec-red);
+          text-decoration: none;
+          font-weight: 600;
+      }
+      .important-notes-list li a:hover {
+          text-decoration: underline;
+      }
+
+      @keyframes blink {
+          0%, 100% { color: var(--npec-red); }
+          50% { color: var(--npec-dark-blue); } /* Adjusted blinking colors */
+      }
+
+      .blinking-text {
+          animation: blink 2s linear infinite;
+      }
+
+      .footer-bottom {
+        background: var(--npec-dark-blue);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .navbar {
+          position: relative;
+          right: 0;
+          width: 100%;
+          border-radius: 0;
+        }
+        
+        .page-hero h1 {
+          font-size: 2rem;
+        }
+        .registration-heading, .important-notes-title {
+            font-size: 2rem;
+        }
+      }
+    </style>
+</head>
+
+<body>
+    <svg class="left-decorator-top" width="75" height="300" viewBox="0 0 165 819" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_dd_75_7)">
+            <path d="M0 0H115.506V662.68C115.506 726.472 63.7921 778.186 0 778.186V0Z" fill="#870117" />
+        </g>
+        <defs>
+            <filter id="filter0_dd_75_7" x="-31" y="-40" width="195.506" height="858.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dx="9" /><feGaussianBlur stdDeviation="20" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_7" />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                <feOffset dy="4" /><feGaussianBlur stdDeviation="2" /><feComposite in2="hardAlpha" operator="out" /><feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" /><feBlend mode="normal" in2="effect1_dropShadow_75_7" result="effect2_dropShadow_75_7" />
+                <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_75_7" result="shape" />
+            </filter>
+        </defs>
+    </svg>
+
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" style="font-size: medium;" href="#">NPEC 2025</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-bs-toggle="dropdown">Home</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Committee</a></li>
+                                <li><a class="dropdown-item" href="#">Tracks</a></li>
+                                <li><a class="dropdown-item" href="#">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button" data-bs-toggle="dropdown">For Authors</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Call for Papers</a></li>
+                                <li><a class="dropdown-item" href="#">Call for Special Session</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgram" role="button" data-bs-toggle="dropdown">Program</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Technical Programme</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Awards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Venue</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sponsorship</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Registration</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4 my-3">
-          <div class="card text-center">
-            <div class="card-body">
-              <i class="fas fa-train fa-3x"></i>
-              <h5 class="card-title mt-2">By Rail</h5>
-              <p class="card-text">
-                The nearest major railway station is
-                <strong>Kozhikode Railway Station</strong>, approximately 22 km
-                from the venue.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <i class="fas fa-taxi fa-3x"></i>
-              <h5 class="card-title mt-2">By Road</h5>
-              <p class="card-text">
-                NIT Calicut is well connected by road, with frequent bus and
-                taxi services from Kozhikode city.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </nav>
+    </header>
 
-      <div class="about">
-        <div>
-          <h4 class="mt-4 fw-bold">About NIT Calicut</h4>
-          <p>
-            National Institute of Technology Calicut (NITC) is one of India’s 31
-            institutions of national importance, established under the National
-            Institute of Technology Act, 2007, and fully funded by the
-            Government of India. Originally founded in 1961 as a Regional
-            Engineering College (REC), it was rebranded as an NIT in 2002 with a
-            focus on higher technical education and research in Engineering,
-            Science, Technology, and Management. Located amidst the picturesque
-            Western Ghats in Kerala, NITC spans 120 hectares along the
-            Calicut-Mukkam road, approximately 22 km from Calicut city. The
-            region, historically significant as the entry point of Vasco da Gama
-            to India, is known for its serene landscapes, backwaters, and
-            vibrant local culture. As a fully residential institution, NITC
-            provides state-of-the-art infrastructure, including academic
-            buildings, research labs, hostels, and faculty residences. The
-            Institute offers 11 undergraduate (UG) and 29 postgraduate (PG)
-            programs, including an MBA, along with robust doctoral research
-            programs that have seen remarkable growth in research publications
-            and patents. With proactive collaborations across academia, research
-            organizations, and industries, NITC plays a pivotal role in
-            technological advancement and regional development. Ranked 23rd
-            among technical institutions and 3rd in architecture in 2020, the
-            Institute continues its pursuit of excellence, aiming for global
-            recognition through innovation and academic leadership. NITC
-            acknowledges the Government of India, Ministry of Education, Kerala
-            State Government, alumni, and industry partners for their continued
-            support in its mission to drive impactful education and research.
-          </p>
+    <section class="page-hero">
+        <div class="container">
+            <h1>Registration Fees</h1>
         </div>
-        <div>
-          <h4 class="mt-4 fw-bold">
-            About the Department of Electronics and Electrical Engineering
-          </h4>
-          <p>
-            Established in 1961, the Department of Electrical Engineering of the
-            National Institute of Technology Calicut offers programmes leading
-            to Bachelor’s Degree, Master’s Degree as well as Ph.D. The four year
-            undergraduate programme leads to the Bachelor of Technology(B.Tech)
-            degree in Electrical and Electronics Engineering. Specializations
-            for the Master’s level programmes are (i) Instrumentation & Control
-            Systems (ii) Power Systems (iii) Power Electronics (iv)Industrial
-            Power and Automation and (v) High Voltage Engineering and (vi)
-            Electric Vehicle Engineering. These programmes are of two year
-            duration and lead to the degree of Master of Technology (M.Tech) in
-            Electrical Engineering with respective specializations specifically
-            mentioned in the degree certificate. The research programme in
-            Electrical Engineering, Control Systems and other related areas
-            leads to the Ph.D. Degree awarded by the Institute. In addition to
-            these regular programmes, this department is also actively involved
-            in conducting faculty development programmes, job-oriented
-            short-term training programmes, continuing education programmes for
-            engineering professionals and academic faculty. The six major
-            research groups in the department are the Power & Energy Systems,
-            Industrial Power and Automation, Electric Machines & Power
-            Electronics, Control System and Instrumentation, High Voltage Engg
-            and 6. Biomedical and Signal Processing. These groups also promote
-            interdisciplinary research that are in the domain of the faculty
-            expertise. The laboratories and research facilities in the
-            Department are well maintained and regularly updated. Members of the
-            faculty are actively involved in sponsored research and consultancy
-            works. The R&D projects undertaken in the past were sponsored by the
-            various agencies like the Ministry of Human Resources Development
-            (MHRD) Government of India, the Department of Science &Technology
-            (DST) Government of India, All India Council for Technical
-            Education, Government of India and the Kerala State Council for
-            Science, Technology and Environment, Government of Kerala. A number
-            of projects are in progress. Rupees ten million worth modernization
-            work sponsored by the Department of Science and Technology,
-            Government of India to strengthen the research facilities in the
-            area of Power & Energy Systems is nearing completion.
-          </p>
-        </div>
-      </div>
-    </div>
+    </section>
 
-    <footer class="footer mt-4 text-center">
-      <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
+    <section class="content-section">
+        <div class="table-responsive">
+            <table class="table registration-table">
+                <thead>
+                    <tr>
+                        <th rowspan="2">Category</th>
+                        <th>Early Bird Registration Fee</th>
+                        <th>Registration Fee</th>
+                    </tr>
+                    <tr>
+                        <th>Indian Delegates / Foreign Delegates (INR)</th>
+                        <th>Indian Delegates / Foreign Delegates (INR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>IEEE Member (full registration)</td>
+                        <td>10,000</td>
+                        <td>12,000</td>
+                    </tr>
+                    <tr>
+                        <td>IEEE Non-Member (full registration)</td>
+                        <td>12,500</td>
+                        <td>15,000</td>
+                    </tr>
+                    <tr>
+                        <td>IEEE Student Member</td>
+                        <td>6,000</td>
+                        <td>7,000</td>
+                    </tr>
+                    <tr>
+                        <td>IEEE Non-Member Student</td>
+                        <td>7,500</td>
+                        <td>8,500</td>
+                    </tr>
+                    <tr>
+                        <td>Accompanying Person (No access to any technical activities)</td>
+                        <td>6,000</td>
+                        <td>7,000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="important-notes-title">Important Notes</h2>
+        <ul class="important-notes-list">
+            <li>Based on availability, student participants may get hostel accommodation for 4 days (13-12-2025 to 17-12-2025) on charge basis. More details will be provided on the conference website.</li>
+            <li>Each full registration is valid for one paper. An additional paper can be included for INR 4000 extra.</li>
+            <li>IEEE PELS/IAS/IES members will get a 5% additional discount.</li>
+            <li class="fw-bold">Student registrations are valid for inclusion of papers in the conference proceedings.</li>
+            <li>Any registration includes access to all conference activities, breakfasts, lunches, dinners, and coffee breaks.</li>
+            <li>Registration fees are non-refundable.</li>
+            <li>An 18% GST will be added to each registration fee. Additional transaction fees may apply.</li>
+            <li>The maximum number of pages in a paper is limited to 6.</li>
+            <li>For any queries, contact <a href="mailto:kumaravel_s@nitc.ac.in">kumaravel_s@nitc.ac.in</a>.</li>
+            <li class="fw-bold">Kindly do spot registration at NIT Calicut if planning to attend NPEC 2025.</li>
+        </ul>
+    </section>
+
+    <footer class="footer-bottom">
+        <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
