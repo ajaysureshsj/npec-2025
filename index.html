@@ -53,7 +53,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
 
-    
+    <link rel="stylesheet" href="https://unpkg.com/flipdown@0.3.2/dist/flipdown.css">
 
     <style>
       :root {
@@ -159,14 +159,15 @@
       /* Hero Section */
       .hero-section {
         background: var(--npec-text-light);
-        padding: 120px 0;
+        padding: 100px 0;
         text-align: center;
         position: relative;
         z-index: 1;
+        width:auto;
       }
 
       .hero-section h1 {
-        font-size: 3rem;
+        font-size: 2.2rem;
         font-weight: 900;
         margin-bottom: 1rem;
         font-family: "Prata", serif;
@@ -174,7 +175,7 @@
       }
 
       .hero-section .subtitle {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: var(--npec-gray);
         margin-bottom: 0.5rem;
         font-family: "Prata", serif;
@@ -183,14 +184,14 @@
       }
 
       .hero-section .location {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 600;
         color: var(--npec-red);
         font-family: "Prata", serif;
       }
 
       .hero-section .date {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: var(--npec-dark-blue);
         font-family: "Prata", serif;
@@ -560,7 +561,7 @@
                 Special Sessions
               </a>
 
-        <div id="flipdown" class="flipdown flipdown__theme-light"></div>
+        <div id="flipdown" class="flipdown flipdown__theme-dark"></div>
 
       </div>
     </section>
@@ -765,5 +766,16 @@ document.addEventListener("DOMContentLoaded", function () {
   animate();
 });
 </script>
+  <script src="https://unpkg.com/flipdown@0.3.2/dist/flipdown.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Unix timestamp (in seconds) for the countdown end date.
+        // End date: December 14, 2025, 9:00 AM
+        const endDate = new Date("2025-12-14T09:00:00").getTime() / 1000;
+
+        // Initialize FlipDown
+        new FlipDown(endDate, "flipdown").start();
+      });
+    </script>
   </body>
 </html>
