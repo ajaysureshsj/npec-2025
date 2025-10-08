@@ -1,318 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NPEC 2025 - Special Session 3</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/global.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand fw-bolder cursor-pointer" href="/">NPEC 2025</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Home
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/committee.html"
-                    >Committee
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/tracks.html"
-                    >Tracks</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/home/contact.html"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                For Authors
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-papers.html"
-                    >Call for Papers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-special-sessions.html"
-                    >Call for Special Session</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-tutorials.html"
-                  >
-                    Call for Tutorials</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/final-paper-submission.html"
-                    >Final Paper Submission</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/presentation-guideline.html"
-                    >Presentation Guidelines</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/authors/call-for-student-poster-presentation.html"
-                    >Call for Student Poster Presentation</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link cursor-pointer dropdown-toggle cursor-pointer"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                aria-expanded="false"
-              >
-                Program
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/technical-programme.html"
-                    >Technical Programme
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item cursor-pointer"
-                    href="/pages/program/speakers.html"
-                    >Speakers</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/awards.html"
-                >Awards
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/venue.html"
-                >Venue</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link cursor-pointer"
-                href="/pages/accommodation.html"
-                >Accommodation</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/sponsorship.html"
-                >Sponsorship</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link cursor-pointer" href="/pages/registration.html"
-                >Registration</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <style>
+      :root {
+        --npec-red: #830202;
+        --npec-dark-blue: #1a2332;
+      }
 
+      body {
+        font-family: "Inter", sans-serif;
+        background: white;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Space Grotesk", sans-serif;
+      }
 
-    
-    <div class="container my-5">
-        <h3 class="fw-bold mb-4">Special Session 3 : AI-Driven Power Electronics and Intelligent Energy Systems for Sustainable Mobility and Renewable Integration</h3>
+      .left-decorator-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
 
+      @media (max-width: 992px) {
+        .left-decorator-top {
+          display: none;
+        }
+      }
+
+      .navbar {
+        background: var(--npec-red);
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 1px;
+        width: auto;
+        z-index: 10;
+        border-radius: 0 0 50px 50px;
+        backdrop-filter: blur(8px);
+        box-shadow: 0px 6px 15px var(--npec-dark-blue);
+      }
+
+      .navbar-nav {
+        padding: 0.5rem 1rem;
+      }
+
+      .nav-link {
+        color: white !important;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 0.8rem !important;
+        text-transform: uppercase;
+      }
+
+      .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.5rem;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+      
+      .dropdown-menu {
+        background-color: var(--npec-red);
+        border-radius: 10px;
+        border: none;
+        margin-top: 10px;
+      }
+
+      .dropdown-item {
+        color: white;
+        font-size: 0.85rem;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+      }
+
+      .dropdown-item:hover,
+      .dropdown-item:focus {
+        background-color: #a31818;
+        color: white;
+      }
+      
+      .page-hero {
+        background: white;
+        padding-top: 120px;
+        text-align: center;
+      }
+
+      .page-hero h1 {
+        font-size: 3rem;
+        color: var(--npec-red);
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+      
+      .page-hero h2.sub-heading {
+        font-size: 1.75rem;
+        color: var(--npec-dark-blue);
+        margin-bottom: 40px;
+        font-weight: 600;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .content-section {
+        padding: 40px 20px 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-grow: 1;
+      }
+      
+      .content-section p, .content-section ul {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #333;
+      }
+      
+      .content-section a {
+          color: var(--npec-red);
+          text-decoration: none;
+          font-weight: 600;
+      }
+
+      .content-section a:hover {
+          text-decoration: underline;
+      }
+
+      .custom-list-title {
+        font-size: 2.5rem;
+        color: var(--npec-red);
+        margin-bottom: 30px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      .custom-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .custom-list li {
+        background-color: white;
+        color: var(--npec-dark-blue);
+        padding: 20px;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+      
+      .topics-list {
+          list-style-type: '✓  ';
+          padding-left: 2rem;
+      }
+      
+      .topics-list li {
+          padding-left: 1rem;
+          margin-bottom: 0.5rem;
+      }
+
+      .footer-bottom {
+        background: var(--npec-dark-blue);
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: auto;
+      }
+
+      @media (max-width: 992px) {
+        .navbar {
+          position: relative;
+          right: 0;
+          width: 100%;
+          border-radius: 0;
+        }
         
-        <h5 class="fw-bold mb-3">Important Dates</h5>
-  <ul class="list-unstyled">
-    <li>
-      <span class="fw-bold text-secondary">Paper Submission Deadline:</span>
-      <span class="text-primary">6th Oct, 2025</span>
-    </li>
-    <li>
-      <span class="fw-bold text-secondary">Paper Acceptance Notification:</span>
-      <span class="text-primary">14th Oct, 2025</span>
-    </li>
-    <li>
-      <span class="fw-bold text-secondary">Camera-Ready Paper Submission Deadline:</span>
-      <span class="text-primary">31st Oct, 2025</span>
-    </li>
-    <li>
-      <span class="fw-bold text-secondary">Final Registration Deadline:</span>
-      <span class="text-primary">31st Oct, 2025</span>
-    </li>
-  </ul>
+        .page-hero h1 {
+          font-size: 2rem;
+        }
+        .page-hero h2.sub-heading {
+          font-size: 1.5rem;
+        }
+        .custom-list-title {
+            font-size: 2rem;
+        }
+      }
+    </style>
+</head>
 
-        <div class="mb-4">
-            <h5><strong>Organizers:</strong></h5>
-            <ol>
+<body>
+   <svg class="left-decorator-top" width="75" height="300" viewBox="0 0 165 819" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <g filter="url(#filter0_dd_75_7)">
+       <path d="M0 0H115.506V662.68C115.506 726.472 63.7921 778.186 0 778.186V0Z" fill="#870117" />
+       <g transform="translate(35, 80)">
+         <path d="M16.7357 613.781C9.01866 611.639 3.30064 604.607 3.30064 596.177L3.30061 21.0509C3.30061 12.6213 8.97215 5.54224 16.7356 3.44647L16.7356 0.000121339C7.15912 2.18903 -2.65076e-05 10.8049 -2.60597e-05 21.0509L-9.20162e-07 596.177C-4.72295e-07 606.423 7.15915 615.039 16.7357 617.228L16.7357 613.781Z" fill="white" />
+         <path d="M27.1015 3.63361C34.4466 6.00885 39.7927 12.9015 39.7927 21.0518L39.7928 596.178C39.7928 604.328 34.4466 611.267 27.1016 613.596L27.1016 617.042C36.3062 614.574 43.1399 606.191 43.1399 596.178L43.1399 21.0518C43.1399 11.0386 36.3061 2.65558 27.1015 0.187195L27.1015 3.63361Z" fill="white" />
+         <path d="M36.4933 278.971L36.4933 259.038L6.60156 288.984L6.60156 308.87L36.4933 278.971Z" fill="white" />
+         <path d="M36.4933 304.912L36.4933 283.628L6.60156 313.575L6.60156 334.812L36.4933 304.912Z" fill="white" />
+         <path d="M36.4933 333.926L36.4933 309.569L6.60156 339.515L6.60156 363.872L36.4933 333.926Z" fill="white" />
+         <path d="M36.4933 369.088L36.4933 338.583L6.60156 368.529L6.60156 399.034L36.4933 369.088Z" fill="white" />
+         <path d="M36.4937 410.072L36.4937 373.792C26.5453 383.759 16.5968 393.725 6.64844 403.692L6.64844 439.972L36.4937 410.072Z" fill="white" />
+         <path d="M36.4937 462.326L36.4937 414.729L6.64844 444.629L6.64844 492.226C16.5504 482.259 26.4988 472.293 36.4937 462.326Z" fill="white" />
+         <path d="M36.4933 525.805L36.4933 466.984L6.60156 496.883L6.60156 555.751L36.4933 525.805Z" fill="white" />
+         <path d="M6.60156 560.409L6.60156 596.176C6.60156 604.42 13.2958 611.126 21.5242 611.126C29.7525 611.126 36.4468 604.42 36.4468 596.176L36.4468 530.509L6.60156 560.409Z" fill="white" />
+         <path d="M36.4933 254.381L36.4933 235.845L6.60156 265.745L6.60156 284.281L36.4933 254.381Z" fill="white" />
+         <path d="M36.4933 231.141L36.4933 214.282L6.60156 244.228L6.60156 261.087L36.4933 231.141Z" fill="white" />
+       </g>
+     </g>
+     <defs>
+       <filter id="filter0_dd_75_7" x="-31" y="-40" width="195.506" height="858.186" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+         <feFlood flood-opacity="0" result="BackgroundImageFix" />
+         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+         <feOffset dx="9" />
+         <feGaussianBlur stdDeviation="20" />
+         <feComposite in2="hardAlpha" operator="out" />
+         <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+         <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_75_7" />
+         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+         <feOffset dy="4" />
+         <feGaussianBlur stdDeviation="2" />
+         <feComposite in2="hardAlpha" operator="out" />
+         <feColorMatrix type="matrix" values="0 0 0 0 0.796078 0 0 0 0 0.980392 0 0 0 0 1 0 0 0 1 0" />
+         <feBlend mode="normal" in2="effect1_dropShadow_75_7" result="effect2_dropShadow_75_7" />
+         <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_75_7" result="shape" />
+       </filter>
+     </defs>
+   </svg>
+
+   <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" style="font-size: medium;" href="/">NPEC 2025</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHome" role="button" data-bs-toggle="dropdown">Home</a>
+                            <ul class="dropdown-menu">
+                               <li><a class="dropdown-item" href="/pages/home/committee.html">Committee</a></li>
+                               <li><a class="dropdown-item" href="/pages/home/tracks.html">Tracks</a></li>
+                               <li><a class="dropdown-item" href="/pages/home/contact.html">Contact Us</a></li> 
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAuthors" role="button" data-bs-toggle="dropdown">For Authors</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pages/authors/call-for-papers.html">Call for Papers</a></li>
+                                <li><a class="dropdown-item" href="/pages/authors/call-for-special-sessions.html">Call for Special Session</a></li>
+                                <li><a class="dropdown-item" href="/pages/authors/call-for-tutorials.html">Call for Tutorials</a></li>
+                                <li><a class="dropdown-item" href="/pages/authors/final-paper-submission.html">Final Paper Submission</a></li>
+                                <li><a class="dropdown-item" href="/pages/authors/presentation-guideline.html">Presentation Guidelines</a></li>
+                                <li><a class="dropdown-item" href="/pages/authors/call-for-student-poster-presentation.html">Call for Student Poster Presentation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgram" role="button" data-bs-toggle="dropdown">Program</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/pages/program/technical-programme.html">Technical Programme</a></li>
+                                <li><a class="dropdown-item" href="/pages/program/speakers.html">Speakers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/awards.html">Awards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/venue.html">Venue</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/accommodation.html">Accommodation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/sponsorship.html">Sponsorship</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/pages/registration.html">Registration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <section class="page-hero">
+       <div class="container">
+           <h1>Special Session 3</h1>
+           <h2 class="sub-heading">AI-Driven Power Electronics and Intelligent Energy Systems for Sustainable Mobility and Renewable Integration</h2>
+       </div>
+   </section>
+
+   <section class="content-section">
+        <h2 class="custom-list-title">Important Dates</h2>
+        <ul class="custom-list">
+            <li><strong>Paper Submission Deadline:</strong> 6th Oct, 2025</li>
+            <li><strong>Paper Acceptance Notification:</strong> 14th Oct, 2025</li>
+            <li><strong>Camera-Ready Paper Submission Deadline:</strong> 31st Oct, 2025</li>
+            <li><strong>Final Registration Deadline:</strong> 31st Oct, 2025</li>
+        </ul>
+
+        <h2 class="custom-list-title mt-5">Organizers</h2>
+        <ul class="custom-list">
             <li>
-                <div> Dr. Subhendu Sekhar Sahoo</div>
-                <div>Associate Professor</div>
-                <div>Department of Electrical and Electronics Engineering</div>
-                <div>Vignan's Institute of Information Technology, Visakhapatnam</div>
-                  <div class="mb-4">
-                  Email:
-                  <a href="mailto:subhendu441@gmail.com" class="text-dark text-decoration-underline">
-                    subhendu441@gmail.com
-                  </a>
-              </div>
-                
+                <strong>Dr. Subhendu Sekhar Sahoo</strong><br>
+                Associate Professor<br>
+                Department of Electrical and Electronics Engineering<br>
+                Vignan's Institute of Information Technology, Visakhapatnam<br>
+                Email: <a href="mailto:subhendu441@gmail.com">subhendu441@gmail.com</a>
             </li>
-
-
-               <li>
-                <div> Dr. Debayan Sarkar  </div>
-                <div>Assistant Professor</div>
-                <div>Department of Electrical Engineering</div>
-                <div>Vignan's Institute of Information Technology, Visakhapatnam</div>
-                  <div class="mb-4">
-                  Email:
-                  <a href="mailto:debayansarkar@ee.nits.ac.in" class="text-dark text-decoration-underline">
-                     debayansarkar@ee.nits.ac.in
-                  </a>
-              </div>
-                
+            <li>
+                <strong>Dr. Debayan Sarkar</strong><br>
+                Assistant Professor<br>
+                Department of Electrical Engineering<br>
+                Vignan's Institute of Information Technology, Visakhapatnam<br>
+                Email: <a href="mailto:debayansarkar@ee.nits.ac.in">debayansarkar@ee.nits.ac.in</a>
             </li>
-         
-            </ol>
-        </div>
-        <div class="mb-4">
-             <h5><strong>Technical Outline of the Session:</strong></h5>
-               
-              <p>AI-Driven Power Electronics and Intelligent Energy Systems for Sustainable Mobility and 
-              Renewable Integration aims to explore the transformative role of Artificial Intelligence (AI) in the 
-              design, control, and optimization of modern power electronics systems, focusing on applications 
-              in sustainable mobility and renewable energy integration. The session emphasizes the utilization 
-              of AI techniques including machine learning, deep learning, reinforcement learning, and 
-              predictive analytics to enhance the efficiency, reliability, and adaptability of power electronic 
-              converters, energy storage systems, and smart grids. One major area of interest is AI-enhanced 
-              power converter design and control, where intelligent algorithms enable real-time optimization of 
-              voltage, current, and power factor in grid-tied and standalone systems, while also providing 
-              adaptive control for Wide Bandgap (WBG) semiconductor-based converters, which are 
-              increasingly important for high-efficiency and high-density power applications. Another focus 
-              area is intelligent energy management in renewable systems, where AI-driven forecasting and 
-              optimization enable more accurate prediction of renewable generation and load demand, as well as 
-              efficient scheduling of energy storage systems (ESS). These capabilities facilitate dynamic power 
-              allocation between renewable sources, storage units, and loads, enhancing grid stability and 
-              ensuring efficient utilization of available energy resources. The session also addresses sustainable 
-              mobility applications, particularly the integration of AI in electric vehicle (EV) systems. Topics 
-              include intelligent EV charging and discharging strategies, vehicle-to-grid (V2G) integration, and 
-              AI-assisted traction drive management to maximize energy efficiency and extend battery life, 
-              while supporting grid stability. 
-              In addition, the session highlights the importance of digital twin and cyber-physical modeling for 
-              power electronics and energy systems. AI-enabled digital twins provide real-time monitoring, 
-              predictive maintenance, and fault diagnosis capabilities, enabling the early detection of system 
-              anomalies and reducing downtime. Such models also facilitate the simulation and optimization of 
-              complex hybrid energy systems, integrating distributed generation, storage, and loads. Moreover, 
-              the session explores AI applications in smart grids and decentralized energy systems, including 
-              predictive control, adaptive protection, and real-time optimization of distributed energy resources. 
-              AI techniques can enhance grid stability, power quality, and resiliency, particularly when 
-              integrating variable renewable sources in microgrid and islanded operations. Emerging trends 
-              such as AI-based thermal management of power devices, data-driven reliability optimization, and 
-              the convergence of AI, IoT, and power electronics for sustainable urban energy systems are also 
-              discussed, reflecting the interdisciplinary nature of modern energy challenges. 
-              Overall, this special session seeks to bring together researchers, practitioners, and industry experts 
-              working on AI-driven innovations in power electronics and energy systems, providing a platform 
-              for sharing cutting-edge research, practical implementations, and visionary concepts. By 
-              addressing the convergence of AI, renewable energy, and electric mobility, the session aims to 
-              inspire the development of intelligent, adaptive, and sustainable energy solutions, fostering 
-              collaboration between academia and industry and shaping the future of power electronics and 
-              smart energy systems. Participants will gain insights into the latest methodologies, tools, and 
-              applications, as well as opportunities to explore collaborative research and technology transfer for 
-              sustainable energy solutions</p>
-            ha</div>
-        <div>
-            <h5><strong>Topics of Session:</strong></h5>
-            
-            <ul>
+        </ul>
+
+        <h2 class="custom-list-title mt-5">Technical Outline of the Session</h2>
+        <p>AI-Driven Power Electronics and Intelligent Energy Systems for Sustainable Mobility and Renewable Integration aims to explore the transformative role of Artificial Intelligence (AI) in the design, control, and optimization of modern power electronics systems, focusing on applications in sustainable mobility and renewable energy integration. The session emphasizes the utilization of AI techniques including machine learning, deep learning, reinforcement learning, and predictive analytics to enhance the efficiency, reliability, and adaptability of power electronic converters, energy storage systems, and smart grids. One major area of interest is AI-enhanced power converter design and control, where intelligent algorithms enable real-time optimization of voltage, current, and power factor in grid-tied and standalone systems, while also providing adaptive control for Wide Bandgap (WBG) semiconductor-based converters, which are increasingly important for high-efficiency and high-density power applications. Another focus area is intelligent energy management in renewable systems, where AI-driven forecasting and optimization enable more accurate prediction of renewable generation and load demand, as well as efficient scheduling of energy storage systems (ESS). These capabilities facilitate dynamic power allocation between renewable sources, storage units, and loads, enhancing grid stability and ensuring efficient utilization of available energy resources. The session also addresses sustainable mobility applications, particularly the integration of AI in electric vehicle (EV) systems. Topics include intelligent EV charging and discharging strategies, vehicle-to-grid (V2G) integration, and AI-assisted traction drive management to maximize energy efficiency and extend battery life, while supporting grid stability.</p>
+        <p>In addition, the session highlights the importance of digital twin and cyber-physical modeling for power electronics and energy systems. AI-enabled digital twins provide real-time monitoring, predictive maintenance, and fault diagnosis capabilities, enabling the early detection of system anomalies and reducing downtime. Such models also facilitate the simulation and optimization of complex hybrid energy systems, integrating distributed generation, storage, and loads. Moreover, the session explores AI applications in smart grids and decentralized energy systems, including predictive control, adaptive protection, and real-time optimization of distributed energy resources. AI techniques can enhance grid stability, power quality, and resiliency, particularly when integrating variable renewable sources in microgrid and islanded operations. Emerging trends such as AI-based thermal management of power devices, data-driven reliability optimization, and the convergence of AI, IoT, and power electronics for sustainable urban energy systems are also discussed, reflecting the interdisciplinary nature of modern energy challenges.</p>
+        <p>Overall, this special session seeks to bring together researchers, practitioners, and industry experts working on AI-driven innovations in power electronics and energy systems, providing a platform for sharing cutting-edge research, practical implementations, and visionary concepts. By addressing the convergence of AI, renewable energy, and electric mobility, the session aims to inspire the development of intelligent, adaptive, and sustainable energy solutions, fostering collaboration between academia and industry and shaping the future of power electronics and smart energy systems. Participants will gain insights into the latest methodologies, tools, and applications, as well as opportunities to explore collaborative research and technology transfer for sustainable energy solutions.</p>
+
+        <h2 class="custom-list-title mt-5">Topics of Session</h2>
+        <ul class="topics-list">
             <li>AI-Based Control and Optimization of Power Converters</li>
             <li>Intelligent Energy Management in Renewable Systems</li>
             <li>Electric Vehicle Applications and Grid Integration</li>
             <li>Digital Twins and Predictive Maintenance</li>
             <li>Smart Grid and Decentralized Energy Systems</li>
-            </ul>
-        </div>
-        </div>
+        </ul>
+   </section>
 
-        <footer class="footer">
-           <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
-        </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+   <footer class="footer-bottom">
+       <p class="mb-0">NPEC 2025, NIT Calicut, Kerala, India</p>
+   </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-
-
