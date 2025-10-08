@@ -156,16 +156,56 @@
         color: white;
       }
 
-      /* Hero Section */
       .hero-section {
-        background: var(--npec-text-light);
-        padding: 100px 0;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-        width:auto;
-      }
+      position: relative;
+      height: 90vh; 
+      min-height: 800px; 
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;  
+      flex-direction: column;
+    }
 
+  
+    .hero-bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+      z-index: 0;
+      opacity: 1;
+      filter: brightness(1.1) contrast(1.2) saturate(1.15); 
+    }
+
+    
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.15);
+      z-index: 1;
+    }
+
+    .hero-content {
+
+      position: relative;
+      z-index: 2; 
+      text-align: center;
+    }
+
+      .hero-section h1,
+      .hero-section p,
+      .hero-section a {
+        color: #fff; 
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0,0,0,0.5);
+      }
       .hero-section h1 {
         font-size: 2.2rem;
         font-weight: 900;
@@ -176,7 +216,7 @@
 
       .hero-section .subtitle {
         font-size: 1.6rem;
-        color: var(--npec-gray);
+        color:white;
         margin-bottom: 0.5rem;
         font-family: "Prata", serif;
         font-weight: 900;
@@ -186,31 +226,16 @@
       .hero-section .location {
         font-size: 1.4rem;
         font-weight: 600;
-        color: var(--npec-red);
+        color:white;
         font-family: "Prata", serif;
       }
 
       .hero-section .date {
         font-size: 1.2rem;
         font-weight: 700;
-        color: var(--npec-dark-blue);
+        color:white;
         font-family: "Prata", serif;
       }
-
-        #radial-dots-bg {
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        pointer-events: none;
-        overflow: hidden;
-        }
-        .hero-section {
-        position: relative;
-        overflow: hidden;
-        }
-      
       
       /* About + Announcements */
       .content-section {
@@ -534,25 +559,30 @@
     </header>
 
     <section class="hero-section">
-      <div id="radial-dots-bg"></div>
-      <div class="radial-pattern-container">
+      <video autoplay muted loop playsinline class="hero-bg-video">
+        <source src="/assets/nitc.mp4" type="video/mp4" />
+    
+        Your browser does not support the video tag.
+      </video>
+
+     
+      <div class="video-overlay"></div>
+
+      <div class="hero-content" >
         <h1>12th National Power Electronics Conference 2025</h1>
         <p class="subtitle">at National Institute of Technology Calicut</p>
         <p class="location">NIT Calicut, India</p>
         <p class="date">14th to 16th December, 2025</p>
 
+        <a href="/pages/registration.html" class="btn btn-danger cta-button">Register Now</a>
+        <a href="/pages/authors/call-for-special-sessions.html" class="btn btn-secondary cta-button">
+          Special Sessions
+        </a>
 
-        <a href="/pages/registration.html" class="btn btn-danger cta-button"
-                >Register Now</a
-              >
-              <a href="/pages/authors/call-for-special-sessions.html" class="btn btn-secondary cta-button">
-                Special Sessions
-              </a>
-
-        <div id="flipdown" class="flipdown flipdown__theme-dark"></div>
-
+        <div id="flipdown" class="flipdown flipdown__theme-light"></div>
       </div>
     </section>
+
 
     <marquee
         behavior="scroll"
@@ -697,63 +727,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const container = document.getElementById('radial-dots-bg');
-  const width = container.offsetWidth || container.parentElement.offsetWidth;
-  const height = container.offsetHeight || 400;
-  const dotCount = 30;
-  const dotSize = 7;
-  const dotColor = "rgba(40,40,40,0.35)";
-  const dots = [];
-
-
-  container.innerHTML = "";
-
-  
-  for (let i = 0; i < dotCount; i++) {
-    const dot = document.createElement("div");
-    dot.style.position = "absolute";
-    dot.style.width = `${dotSize}px`;
-    dot.style.height = `${dotSize}px`;
-    dot.style.borderRadius = "50%";
-    dot.style.background = dotColor;
-    dot.style.left = `${Math.random() * (width - dotSize)}px`;
-    dot.style.top = `${Math.random() * (height - dotSize)}px`;
-    dot.style.opacity = 0.7;
-    container.appendChild(dot);
-
-    dots.push({
-      el: dot,
-      x: Math.random() * (width - dotSize),
-      y: Math.random() * (height - dotSize),
-      vx: (Math.random() - 0.5) * 2.5,
-      vy: (Math.random() - 0.5) * 2.5
-    });
-  }
-
-  function animate() {
-    for (const d of dots) {
-      d.x += d.vx;
-      d.y += d.vy;
-
-      // Bounce off walls
-      if (d.x <= 0 || d.x >= width - dotSize) d.vx *= -1;
-      if (d.y <= 0 || d.y >= height - dotSize) d.vy *= -1;
-
-      // Clamp position
-      d.x = Math.max(0, Math.min(width - dotSize, d.x));
-      d.y = Math.max(0, Math.min(height - dotSize, d.y));
-
-      d.el.style.left = `${d.x}px`;
-      d.el.style.top = `${d.y}px`;
-    }
-    requestAnimationFrame(animate);
-  }
-
-  animate();
-});
-</script>
   <script src="https://unpkg.com/flipdown@0.3.2/dist/flipdown.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
