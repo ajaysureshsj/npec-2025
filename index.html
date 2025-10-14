@@ -260,7 +260,25 @@
       }
 
       .about-container h2 {
-        font-size: 2rem;
+        font-size: 2rem;        /* Replace the icon with a NEW pill badge */
+        .announcements-list li::before {
+          content: "NEW";
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--npec-red);
+          color: #fff;
+          font-weight: 700;
+          font-size: 0.7rem;
+          padding: 4px 10px;
+          border-radius: 999px;
+          margin-right: 12px;
+          min-width: 36px;
+          height: 22px;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
         margin-bottom: 20px;
         font-family: 'Prata',serif;
       }
@@ -319,15 +337,36 @@
         margin-bottom: 0;
       }
 
-      .announcements-list li::before {
-        content: "\f0a1";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        color: white;
-        margin-right: 12px;
-        font-size: 1.2em;
-        display: inline-block;
-      }
+   
+.announcements-list li::before {
+  content: "\f0a1";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: white;
+  margin-right: 12px;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.announcements-list li.newannounce::before {
+  content: "NEW";
+  font-family: inherit;
+  background: var(--npec-red);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-right: 12px;
+  min-width: 36px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
       .announcements-list li.important {
         background: rgba(255, 87, 34, 0.18);
@@ -685,7 +724,7 @@
             <h2>Announcements</h2>
             <ul class="announcements-list mt-4">
               <li >Results of Regular Sessions Announced.</li>
-              <li>Results of Special Session will be Announced on 14th October 2025</li>
+              <li class="newannounce">Results of Special Sessions Have Been Declared</li>
               <li>Student Registrations are valid for inclusion of papers in the conference proceedings</li>
               <li>Registration for the Conference is Open Now.</li>
             </ul>
