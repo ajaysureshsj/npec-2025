@@ -116,6 +116,22 @@
            text-decoration: underline;
        }
 
+       .fcfs-badge {
+    display: inline-block;
+  
+    color: #080808;
+    font-weight: 800;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+   
+  }
+
+  /* optional subtle pulse to draw attention (remove if undesired) */
+ 
+
+  @media (max-width: 768px) {
+    .fcfs-badge { font-size: 1rem; padding: 6px 10px; border-radius: 10px; }
+  }
       .footer-bottom { background: var(--npec-dark-blue); color: white; padding: 1rem 0; text-align: center; font-size: 0.9rem; }
       
       @media (max-width: 992px) {
@@ -200,8 +216,9 @@
 
                     <div class="in-campus-box p-4 bg-white rounded-3 shadow-sm">
                         <p class="mb-3">
-                        Accommodation facilities are available for participants in the NIT Calicut hostels during the conference.
-                        Allotment will be made on a first-come, first-served basis. The charges are to be borne by the participants
+                        Accommodation facilities are available for participants in the NIT Calicut hostels during the conference.</p>
+                        Allotment will be made on a <span class="fcfs-badge pulse" role="note" aria-label="First come first served">First‑Come, First‑Served Basis</span>.
+                        <p The charges are to be borne by the participants
                         and are not included in the registration fee.
                         </p>
 
