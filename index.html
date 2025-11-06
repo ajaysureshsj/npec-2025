@@ -47,7 +47,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet" />
      
     
-    
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
      <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -552,7 +552,7 @@
           color: black;
         }
         50% {
-          color: blue;
+          color:var(--npec-red)
         }
         100% {
           color: black;
@@ -561,7 +561,10 @@
 
       /* Apply the animation to the class */
       .blinking-text {
+        font-family: "Space Grotesk", "Prata", serif;
         animation: blink 2s linear infinite;
+         font-weight: 700;
+         font-size: 1.4rem;
       }
 
       .red-text {
@@ -689,11 +692,11 @@
         scrollamount="6"
         class="fw-bold text-dark"
       >
-        <span class="blinking-text">
-          | Early Bird Registration extended to 7th November 2025.</span
-          >|
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-         <span class="blinking-text"> Accommodation Details have been Updated |
+        <span class="blinking-text fw-bold">
+           Early Bird Registration extended to 7th November 2025. Register now to avail the benefits! </span
+          >   
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <span class="blinking-text"> | In Campus Accommodation Registration is Open
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         </span>
@@ -725,10 +728,11 @@
           <div class="announcements-container">
             <h2>Announcements</h2>
             <ul class="announcements-list mt-4">
+               <li class="newannounce">In Campus Accommodation Registration is Open.</li>
               <li class="newannounce">Accommodation details have been updated.</li>
               <li class="newannounce">Early Bird Registrations extended to 7th November 2025..</li>
-              <li >Results of Regular Sessions Announced.</li>
               <li class="newannounce">Results of Special Sessions Have Been Declared</li>
+              <li >Results of Regular Sessions Announced.</li>
               <li>Student Registrations are valid for inclusion of papers in the conference proceedings</li>
               <li>Registration for the Conference is Open Now.</li>
             </ul>
