@@ -237,8 +237,7 @@
         color:white;
         font-family: "Prata", serif;
       }
-      
-      /* About + Announcements */
+ 
       .content-section {
         padding: 80px 0;
       }
@@ -261,7 +260,7 @@
       }
 
       .about-container h2 {
-        font-size: 2rem;        /* Replace the icon with a NEW pill badge */
+        font-size: 2rem;        
         .announcements-list li::before {
           content: "NEW";
           display: inline-flex;
@@ -377,7 +376,7 @@
 
       /* Important Dates Section */
       .important-dates-section {
-        background: white;
+        background-color: #f4f7f6;
         padding: 40px 0;
         position: relative;
         overflow: hidden;
@@ -456,26 +455,73 @@
         font-family: inherit;
       }
 
-      /* Sponsors Section */
       .sponsors-section {
-        background: var(--npec-dark-blue);
+        background-color: #f4f7f6;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 25px 25px;
         padding: 80px 0;
         text-align: center;
-      }
+     }
 
-      .sponsors-section h2 {
-        color: white;
+     .sponsors-section {
+        background-color: #f4f7f6;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+        background-size: 25px 25px;
+        padding: 80px 0;
+        text-align: center;
+     }
+
+     .sponsors-section h2 {
+        color: var(--npec-dark-blue); 
         font-size: 2.5rem;
-        margin-bottom: 3rem;
-        letter-spacing: 2px;
-      }
+        margin-bottom: 4rem;
+        letter-spacing: 1px;
+        font-family: 'Space Grotesk', sans-serif;
+     }
 
-      .sponsor-logo {
-        max-width: 300px;
-        height: auto;
+     .sponsor-subheading {
+        color: var(--npec-red); 
+        font-weight: 700;
+        font-size: 1.8rem;
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: 1px;
+        margin-top: 3.5rem; 
+        margin-bottom: 2rem; 
+        text-align: center;
+     }
+
+
+     .sponsor-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+        padding: 2rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px; 
         transition: all 0.3s ease;
-      }
-      
+        width: 100%; 
+     }
+
+     .sponsor-card img {
+        max-width: 100%;
+        max-height: 100px; 
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+     }
+
+   
+     .sponsor-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(131, 2, 2, 0.15); 
+     }
+
+     .sponsor-card:hover img {
+        transform: scale(1.10); 
+     }
+
       .scrolltext
       {
         font-family: 'Inter',sans-serif;
@@ -490,8 +536,7 @@
         font-weight: 500;
       }
 
-      
-      /* Responsive */
+
       @media (max-width: 992px) {
         .left-bar,
         .dates-illustration {
@@ -759,7 +804,7 @@
 <rect width="152.744" height="108.504" fill="white" transform="translate(-5.87207 225.093)"/>
 </clipPath>
 </defs>
-</svg>
+    </svg>
 
       <div class="container">
   <div class="important-dates-container">
@@ -808,16 +853,117 @@
 </div>
     </section>
 
-    <section class="sponsors-section">
-      <div class="container">
-        <h2>OUR SPONSORS</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-6 text-center">
-            <img src="./assets/Altair_Brandmark.jpg" class="sponsor-logo" alt="Altair Sponsor Logo" />
+<section class="sponsors-section">
+    <div class="container">
+      <h2 class="text-center">OUR SPONSORS</h2>
+
+      <h3 class="sponsor-subheading">TECHNICAL CO-SPONSORS</h3>
+      
+      <div class="row justify-content-center g-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://ieeekerala.org/" target="_blank" rel="noopener noreferrer" title="IEEE Kerala Section">
+              <img src="/assets/technicalsponsors/IEEEKS_Brandmark.jpeg" class="sponsor-logo" alt="IEEE Kerala Section" />
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://ias.ieee.org/" target="_blank" rel="noopener noreferrer" title="IAS">
+              <img src="/assets/technicalsponsors/IAS_Brandmark.jpg" class="sponsor-logo" alt="IEEE-IAS" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://www.ieee-ies.org/" target="_blank" rel="noopener noreferrer" title="IEEE-IES">
+              <img src="/assets/technicalsponsors/IES_Brandmark.jpg" class="sponsor-logo" alt="IES" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://www.ieee-pels.org/" target="_blank" rel="noopener noreferrer" title="PELS">
+              <img src="/assets/technicalsponsors/PELS_Brandmark.jpg" class="sponsor-logo" alt="PELS" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://ieee-pes.org/" target="_blank" rel="noopener noreferrer" title="PES">
+              <img src="/assets/technicalsponsors/PES_Brandmark.jpg" class="sponsor-logo" alt="PES" />
+            </a>
+          </div>
+        </div>
+      </div> <h3 class="sponsor-subheading">FINANCIAL SPONSORS</h3>
+
+      <div class="row justify-content-center g-4 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://serb.gov.in/" target="_blank" rel="noopener noreferrer" title="Inserb">
+              <img src="/assets/diamondsponsors/Inserb_Brandmark.jpg" class="sponsor-logo" alt="Inserb" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://altair.com/" target="_blank" rel="noopener noreferrer" title="Altair">
+              <img src="/assets/goldsponsors/Altair_Brandmark.jpg" class="sponsor-logo" alt="Altair" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://www.opal-rt.com/" target="_blank" rel="noopener noreferrer" title="OPAL-RT">
+              <img src="/assets/silversponsors/OPALRT_Brandmark.jpg" class="sponsor-logo" alt="OPAL-RT" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://www.cdac.in/" target="_blank" rel="noopener noreferrer" title="CDAC">
+              <img src="/assets/silversponsors/CDAC_Brandmark.jpg" class="sponsor-logo" alt="CDAC" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://www.tek.com/en" target="_blank" rel="noopener noreferrer" title="Tektronix">
+              <img src="/assets/silversponsors/Tektronix_Brandmark.jpg" class="sponsor-logo" alt="Tektronix" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://sinetecautomation.com/" target="_blank" rel="noopener noreferrer" title="SINTEC">
+              <img src="/assets/silversponsors/SINTEC_Brandmark.jpeg" class="sponsor-logo" alt="SINTEC" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="sponsor-card">
+            <a href="https://reliamotivelabs.tech/" target="_blank" rel="noopener noreferrer" title="Reliamotive">
+              <img src="/assets/bronzesponsors/Reliamotive_Brandmark.jpg" class="sponsor-logo" alt="Reliamotive" />
+            </a>
+          </div>
+        </div>
+
+      </div> 
+    </div> 
+  </section>
+
 
     <footer class="footer">
       <div class="container">
